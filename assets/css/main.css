@@ -1751,5 +1751,158 @@ header.hide-header {
   }
 }
 
+/* ==========================================================================
+   TrynixTech — Clean Editorial "Why Choose Us" Cards
+   (Stable Canvas, High-Definition 3D Visuals with Image Zoom, Zero Translate)
+   ========================================================================== */
+
+.why-choose-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: clamp(24px, 3vw, 36px) !important;
+  width: 100% !important;
+}
+
+/* Stable Editorial Card */
+.why-choose-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transform: none !important;
+}
+
+.why-choose-card:hover {
+  transform: none !important;
+}
+
+/* Hero Visual Canvas — Completely Static / Stable, No Transform Lift */
+.why-choose-canvas {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 1 / 0.88 !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  background-color: #0b0f17 !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.07) !important;
+  transform: none !important;
+  transition: box-shadow 0.35s ease, border-color 0.3s ease !important;
+}
+
+.why-choose-card:hover .why-choose-canvas {
+  transform: none !important;
+  box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.12) !important;
+  border-color: rgba(2, 132, 199, 0.35) !important;
+}
+
+/* 3D Visual Art Image with Smooth In-Place Zoom */
+.why-choose-canvas .why-choose-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 1 !important;
+}
+
+.why-choose-card:hover .why-choose-canvas .why-choose-img {
+  transform: scale(1.05) !important;
+}
+
+/* Metric Text floating at bottom-right inside the Canvas */
+.canvas-bottom-metric {
+  position: absolute !important;
+  bottom: 18px !important;
+  right: 20px !important;
+  z-index: 2 !important;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7), 0 2px 14px rgba(0, 0, 0, 0.9) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Card Information Body */
+.why-choose-info {
+  margin-top: 20px !important;
+  padding: 0 4px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+/* Editorial Title */
+.why-choose-card-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(19px, 1.8vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.32 !important;
+  letter-spacing: -0.022em !important;
+  color: #0f172a !important;
+  margin: 0 0 8px 0 !important;
+  transition: color 0.22s ease !important;
+}
+
+.why-choose-card:hover .why-choose-card-title {
+  color: #0284c7 !important;
+}
+
+/* Clean Editorial Description */
+.why-choose-card-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: #64748b !important;
+  margin: 0 0 14px 0 !important;
+  font-weight: 400 !important;
+}
+
+/* Interactive CTA Link */
+.why-choose-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: auto !important;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #0284c7 !important;
+  transition: gap 0.25s ease, color 0.25s ease !important;
+}
+
+.why-choose-cta .cta-arrow {
+  display: inline-block !important;
+  font-size: 15px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.why-choose-card:hover .why-choose-cta .cta-arrow {
+  transform: translateX(4px) !important;
+}
+
+.why-choose-card:hover .why-choose-cta {
+  color: #0369a1 !important;
+}
+
+/* Responsive Grid */
+@media (max-width: 991px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
 
 
