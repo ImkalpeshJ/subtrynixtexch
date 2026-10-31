@@ -5,46 +5,92 @@
 
 .trynix-about-hero-section,
 .trynix-page-hero-section {
-  position: relative;
-  width: 100%;
-  background-color: #ffffff !important;
-  background-image:
-    radial-gradient(ellipse 72% 90% at 88% 50%, rgba(148, 163, 184, 0.52) 0%, rgba(203, 213, 225, 0.62) 28%, rgba(226, 232, 240, 0.42) 52%, rgba(255, 255, 255, 0) 80%),
-    radial-gradient(circle at 95% 85%, rgba(100, 116, 139, 0.35) 0%, rgba(203, 213, 225, 0.4) 35%, rgba(255, 255, 255, 0) 68%),
-    linear-gradient(112deg, #ffffff 30%, #f8fafc 50%, #e2e8f0 70%, #cbd5e1 88%, #d5e0ec 100%) !important;
-  padding: clamp(170px, 15vw, 215px) 0 clamp(75px, 7vw, 110px);
-  overflow: hidden;
-  isolation: isolate;
+  position: relative !important;
+  width: 100% !important;
+  margin: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background-color: #00030a !important;
+  background-image: none !important;
+  padding: clamp(170px, 15vw, 220px) 0 clamp(90px, 8vw, 130px) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
   border: none !important;
 }
 
-/* Ambient rich lighting sheen across right edge */
+/* Common Background Banner from Service Page on ::before Pseudo-Element */
 .trynix-about-hero-section::before,
 .trynix-page-hero-section::before {
-  content: '';
-  position: absolute;
-  top: -15%;
-  right: -10%;
-  width: 62vw;
-  height: 140%;
-  background: radial-gradient(ellipse at 65% 50%, rgba(148, 163, 184, 0.48) 0%, rgba(203, 213, 225, 0.38) 42%, rgba(255, 255, 255, 0) 75%);
-  pointer-events: none;
-  z-index: 1;
-  filter: blur(16px);
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image:
+    linear-gradient(180deg, rgba(0, 3, 10, 0.35) 0%, rgba(0, 3, 10, 0) 45%, rgba(0, 3, 10, 0.15) 100%),
+    url('../images/service/services-hero-banner.png') !important;
+  background-size: cover !important;
+  background-position: center bottom !important;
+  background-repeat: no-repeat !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  display: block !important;
+  filter: none;
+  transition: filter 0.3s ease !important;
 }
 
+/* Distinct Hue-Rotate Color per Page */
+#services-hero::before,
+.services-hero-dark::before {
+  filter: hue-rotate(0deg) !important; /* Original Cosmic Electric Blue */
+}
+
+#about-hero::before {
+  filter: hue-rotate(45deg) !important; /* Royal Violet / Indigo */
+}
+
+#blogs-hero::before {
+  filter: hue-rotate(95deg) !important; /* Radiant Magenta / Purple Orchid */
+}
+
+#careers-hero::before {
+  filter: hue-rotate(185deg) !important; /* Warm Amber / Sunset Gold */
+}
+
+#contact-hero::before {
+  filter: hue-rotate(310deg) !important; /* Electric Cyan / Aqua Turquoise */
+}
+
+/* Glowing Bottom Horizon Accent Line */
 .trynix-about-hero-section::after,
 .trynix-page-hero-section::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  right: 5%;
-  width: 45vw;
-  height: 100%;
-  background: radial-gradient(circle, rgba(148, 163, 184, 0.3) 0%, rgba(226, 232, 240, 0.18) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
-  filter: blur(30px);
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.45) 50%, transparent 100%) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  display: block !important;
+}
+
+#about-hero::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.45) 50%, transparent 100%) !important;
+}
+
+#blogs-hero::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(236, 72, 153, 0.45) 50%, transparent 100%) !important;
+}
+
+#careers-hero::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.45) 50%, transparent 100%) !important;
+}
+
+#contact-hero::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(6, 182, 212, 0.45) 50%, transparent 100%) !important;
 }
 
 /* Ensure clean pure white page canvas and full-bleed viewport */
@@ -103,9 +149,10 @@ body {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #71717a;
+  color: #38bdf8 !important;
   line-height: 1;
   margin-bottom: 26px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -118,8 +165,9 @@ body {
   font-weight: 800;
   line-height: 1.13;
   letter-spacing: -0.038em;
-  color: #09090b;
+  color: #ffffff !important;
   margin: 0 0 20px 0;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -132,9 +180,10 @@ body {
   font-weight: 400;
   line-height: 1.68;
   letter-spacing: -0.01em;
-  color: #52525b;
+  color: rgba(255, 255, 255, 0.85) !important;
   margin: 0;
   max-width: 720px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -146,10 +195,26 @@ body {
   font-size: clamp(15.5px, 1.25vw, 17.5px);
   font-weight: 400;
   line-height: 1.68;
-  color: #52525b;
+  color: rgba(255, 255, 255, 0.75) !important;
   max-width: 680px;
   letter-spacing: -0.01em;
   margin: 0;
+}
+
+/* Header Logo & Navigation on Dark Hero (before sticky-menu on scroll) */
+body:not(.home-page) .site-header:not(.sticky-menu) .header-logo img {
+  filter: brightness(0) invert(1) !important;
+  transition: filter 0.3s ease !important;
+}
+
+body:not(.home-page) .site-header.sticky-menu .header-logo img {
+  filter: none !important;
+}
+
+body:not(.home-page) .site-header:not(.sticky-menu) .wionmenu-toggle span,
+body:not(.home-page) .site-header:not(.sticky-menu) .wionmenu-toggle span::before,
+body:not(.home-page) .site-header:not(.sticky-menu) .wionmenu-toggle span::after {
+  background-color: #ffffff !important;
 }
 
 /* --------------------------------------------------------------------------

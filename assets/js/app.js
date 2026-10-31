@@ -51,9 +51,23 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   WION STICKY MENU JS INIT
   --------------------------------------------------------------*/
 
+  function checkFooterIntersection() {
+    var footer = document.querySelector(".trynix-footer-section");
+    var header = document.querySelector("#sticky-menu");
+    if (!footer || !header) return;
+
+    var footerRect = footer.getBoundingClientRect();
+    if (footerRect.top <= 90) {
+      header.classList.add("hide-on-footer");
+    } else {
+      header.classList.remove("hide-on-footer");
+    }
+  }
+
   function sticky_header() {
     // Keep top navigation floating on top while scrolling (do not hide on scroll down)
     $("header").removeClass("hide-header");
+    checkFooterIntersection();
   }
   $(function () {
     sticky_header();
@@ -67,12 +81,13 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   window.onresize = function (event) {
     sticky_header();
   };
-  $(window).on("scroll", function () {
+  $(window).on("scroll resize", function () {
     if ($(window).scrollTop() > 20) {
       $("#sticky-menu").addClass("sticky-menu");
     } else {
       $("#sticky-menu").removeClass("sticky-menu");
     }
+    checkFooterIntersection();
   });
 
   /*--------------------------------------------------------------

@@ -36,6 +36,16 @@ header.hide-header {
   opacity: 1 !important;
 }
 
+.site-header.hide-on-footer,
+header.site-header.hide-on-footer,
+.wionheader-section.hide-on-footer {
+  transform: translateY(-130%) !important;
+  -webkit-transform: translateY(-130%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+}
+
 .wionheader-section {
   background-color: transparent !important;
   background: transparent !important;
