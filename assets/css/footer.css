@@ -238,7 +238,6 @@
 .trynix-footer-get-started-btn:hover {
   background: #f1f5f9;
   color: #000000;
-  transform: translateY(calc(-50% - 2px));
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.22);
 }
 
