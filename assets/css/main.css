@@ -1304,3 +1304,452 @@ header.hide-header {
 .wionmobile-menu-btn .wionheader-btn.btn2 span.wionbutton-icon img {
   filter: brightness(0) invert(1) !important;
 }
+
+/* ==========================================================================
+   TrynixTech Services Hover Accordion & Circle Plus/Minus Toggle
+   ========================================================================== */
+.trynix-services-section .services-accordion-list {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.trynix-services-section .service-accordion-item {
+  border-top: 1px solid #e2e8f0 !important;
+  padding-top: clamp(28px, 3.2vw, 42px) !important;
+  padding-bottom: clamp(28px, 3.2vw, 42px) !important;
+  transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.trynix-services-section .service-accordion-item:last-child {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.trynix-services-section .service-accordion-item.is-open {
+  padding-bottom: clamp(48px, 5.5vw, 72px) !important;
+}
+
+/* Header Row: Flex container aligning title on left and circle toggle on right */
+.trynix-services-section .service-accordion-header {
+  width: 100% !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+  user-select: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+  gap: 20px !important;
+}
+
+/* Hide legacy numbers and stray icons */
+.trynix-services-section .service-num,
+.trynix-services-section .service-icon {
+  display: none !important;
+}
+
+/* Service Title */
+.trynix-services-section .service-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(28px, 3.4vw, 42px) !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  transition: color 0.25s ease !important;
+  flex: 1 1 auto !important;
+}
+
+.trynix-services-section .service-accordion-item:hover .service-title,
+.trynix-services-section .service-accordion-item.is-open .service-title {
+  color: #000000 !important;
+}
+
+/* Circle Toggle Icon: circular badge containing plus (+) or minus (-) */
+.trynix-services-section .service-toggle-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  position: relative !important;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Hover on collapsed item */
+.trynix-services-section .service-accordion-item:hover .service-toggle-icon {
+  border-color: #0f172a !important;
+  transform: scale(1.05) !important;
+}
+
+/* Active / Open state: dark circle with white minus */
+.trynix-services-section .service-accordion-item.is-open .service-toggle-icon {
+  background-color: #0f172a !important;
+  border-color: #0f172a !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+  transform: scale(1) !important;
+}
+
+/* SVG and Plus-to-Minus transformation */
+.trynix-services-section .service-toggle-icon svg {
+  display: block !important;
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+  stroke-width: 2.2 !important;
+}
+
+.trynix-services-section .service-toggle-icon svg line {
+  stroke: currentColor !important;
+  stroke-width: 2.2 !important;
+  stroke-linecap: round !important;
+}
+
+/* Vertical line of plus: visible when closed, disappears when open -> leaves minus */
+.trynix-services-section .service-toggle-icon svg line:first-child,
+.trynix-services-section .service-toggle-icon .toggle-line-v {
+  transform-origin: 12px 12px !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+  opacity: 1 !important;
+}
+
+.trynix-services-section .service-accordion-item.is-open .service-toggle-icon svg line:first-child,
+.trynix-services-section .service-accordion-item.is-open .service-toggle-icon .toggle-line-v {
+  transform: rotate(90deg) scaleY(0) !important;
+  opacity: 0 !important;
+}
+
+/* Horizontal line of plus: stays visible, forming the minus */
+.trynix-services-section .service-toggle-icon svg line:last-child,
+.trynix-services-section .service-toggle-icon .toggle-line-h {
+  transform-origin: 12px 12px !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Accordion Body: collapsed by default, smoothly expanded when is-open */
+.trynix-services-section .service-accordion-body {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  display: block !important;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease,
+              visibility 0.45s ease,
+              padding 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.trynix-services-section .service-accordion-item.is-open .service-accordion-body {
+  max-height: 800px !important;
+  overflow: visible !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding-top: clamp(28px, 3.2vw, 42px) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trynix-services-section .service-accordion-item {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .trynix-services-section .service-accordion-item.is-open {
+    padding-bottom: 38px !important;
+  }
+
+  .trynix-services-section .service-title {
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+  }
+
+  .trynix-services-section .service-toggle-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+  }
+
+  .trynix-services-section .service-toggle-icon svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .trynix-services-section .service-accordion-item.is-open .service-accordion-body {
+    max-height: 1100px !important;
+  }
+}
+
+/* ==========================================================================
+   Case Studies / Portfolio Showcase Refinements
+   ========================================================================== */
+
+/* 1. Align Card 1 (gloqr) text to bottom like Card 3 (SMEonCloudERP) */
+.cs-card-gloqr .cs-card-content {
+  justify-content: space-between !important;
+}
+
+.cs-card-gloqr .cs-card-body {
+  margin-top: auto !important;
+  max-width: 75% !important;
+}
+
+.cs-card-gloqr::before {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.88) 42%,
+      rgba(255, 255, 255, 0.25) 68%,
+      transparent 100%),
+    linear-gradient(0deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.72) 30%,
+      transparent 58%) !important;
+}
+
+/* 2. Fix Case Study CTA Button hover color (override Bootstrap a:hover blue) */
+.case-studies-section a.cs-card-cta-btn,
+.case-studies-section a.cs-card-cta-btn:hover,
+.case-studies-section a.cs-card-cta-btn:focus,
+.case-studies-section a.cs-card-cta-btn:active,
+.cs-design-card:hover .cs-card-cta-btn,
+.cs-card-cta-btn:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.case-studies-section a.cs-card-cta-btn span,
+.case-studies-section a.cs-card-cta-btn:hover span,
+.cs-design-card:hover .cs-card-cta-btn span,
+.cs-card-cta-btn:hover span {
+  color: #ffffff !important;
+}
+
+.case-studies-section a.cs-card-cta-btn svg,
+.case-studies-section a.cs-card-cta-btn:hover svg,
+.cs-design-card:hover .cs-card-cta-btn svg,
+.cs-card-cta-btn:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Individual button hover backgrounds preserved with guaranteed white text */
+.cs-btn-gloqr:hover,
+.cs-card-gloqr:hover .cs-btn-gloqr {
+  color: #ffffff !important;
+  background-color: #b8121b !important;
+  border-color: #b8121b !important;
+}
+
+.cs-btn-urvisa:hover,
+.cs-card-urvisa:hover .cs-btn-urvisa {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.cs-btn-sme:hover,
+.cs-card-sme:hover .cs-btn-sme {
+  color: #ffffff !important;
+  background-color: #d94800 !important;
+  border-color: #d94800 !important;
+}
+
+/* 3. Reduce Font Weight for Card Headlines ("Digitalizing Construction Operations", etc.) */
+.cs-design-card .cs-card-headline,
+.cs-card-headline {
+  font-family: 'SatoshiMedium', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ==========================================================================
+   Eyebrow Banner Tags (Clean Normal Text - No Border, No Pill, No Dot)
+   ========================================================================== */
+.services-banner-tag,
+.career-banner-tag {
+  display: inline-block !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #38bdf8 !important;
+  margin-bottom: 16px !important;
+  line-height: 1 !important;
+}
+
+.services-banner-tag::before,
+.career-banner-tag::before {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ==========================================================================
+   How We Work Process Matrix — Balanced Checkerboard Pattern
+   Row 1: White (Card 1) | Grey (Card 2)  | White (Card 3)
+   Row 2: Grey (Card 4)  | White (Card 5) | Grey (Card 6)
+   ========================================================================== */
+@media (min-width: 1025px) {
+  .how-we-work-grid .hww-card:nth-child(1),
+  .how-we-work-grid .hww-card:nth-child(3),
+  .how-we-work-grid .hww-card:nth-child(5) {
+    background-color: #ffffff !important;
+  }
+
+  .how-we-work-grid .hww-card:nth-child(2),
+  .how-we-work-grid .hww-card:nth-child(4),
+  .how-we-work-grid .hww-card:nth-child(6) {
+    background-color: #f7f7f7 !important;
+  }
+
+  .how-we-work-grid .hww-card:nth-child(1):hover,
+  .how-we-work-grid .hww-card:nth-child(3):hover,
+  .how-we-work-grid .hww-card:nth-child(5):hover {
+    background-color: #fafafa !important;
+  }
+
+  .how-we-work-grid .hww-card:nth-child(2):hover,
+  .how-we-work-grid .hww-card:nth-child(4):hover,
+  .how-we-work-grid .hww-card:nth-child(6):hover {
+    background-color: #f2f2f2 !important;
+  }
+}
+
+/* ==========================================================================
+   TrynixTech — "Why Choose Us" Section Header
+   (Keeping Approved Modern Header; Cards Render Original Minimalist Design)
+   ========================================================================== */
+
+.trynix-why-choose-section {
+  position: relative !important;
+  background-color: #ffffff !important;
+  padding: clamp(75px, 8vw, 115px) 0 clamp(85px, 9vw, 125px) !important;
+  overflow: hidden !important;
+  scroll-margin-top: 90px !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+
+.why-choose-container {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* Header: Eyebrow + Title + Subtitle on Left, Pill Button on Right */
+.why-choose-header {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  margin-bottom: clamp(40px, 5vw, 54px) !important;
+}
+
+.why-choose-header-left {
+  max-width: 680px !important;
+}
+
+.why-choose-eyebrow {
+  display: inline-block !important;
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #64748b !important;
+  margin-bottom: 12px !important;
+}
+
+.why-choose-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(34px, 4vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  color: #0f172a !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.why-choose-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(15px, 1.25vw, 17px) !important;
+  line-height: 1.6 !important;
+  color: #64748b !important;
+  margin: 0 !important;
+}
+
+.why-choose-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 24px !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+  white-space: nowrap !important;
+}
+
+.why-choose-pill-btn .pill-arrow {
+  display: inline-block !important;
+  transition: transform 0.25s ease !important;
+}
+
+.why-choose-pill-btn:hover {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  box-shadow: 0 8px 22px -4px rgba(15, 23, 42, 0.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+.why-choose-pill-btn:hover .pill-arrow {
+  transform: translateX(4px) !important;
+}
+
+@media (max-width: 991px) {
+  .why-choose-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+}
+
+
+

@@ -44,7 +44,7 @@
   display: inline-block;
   width: clamp(10px, 1.1vw, 14px);
   height: clamp(10px, 1.1vw, 14px);
-  background-color: #4f46e5;
+  background-color: #000000;
   border-radius: 2.5px;
   margin-left: 6px;
   vertical-align: baseline;
