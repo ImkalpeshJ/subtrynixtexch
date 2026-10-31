@@ -34,13 +34,11 @@ body.career-body {
   width: 720px;
   height: 720px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 214, 202, 0.72) 0%,
-    rgba(254, 226, 220, 0.45) 35%,
-    rgba(255, 240, 236, 0.18) 60%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle at center,
+      rgba(255, 214, 202, 0.72) 0%,
+      rgba(254, 226, 220, 0.45) 35%,
+      rgba(255, 240, 236, 0.18) 60%,
+      rgba(255, 255, 255, 0) 80%);
   filter: blur(48px);
   pointer-events: none;
   z-index: 0;
@@ -55,13 +53,11 @@ body.career-body {
   width: 640px;
   height: 640px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at center,
-    rgba(238, 224, 255, 0.65) 0%,
-    rgba(244, 234, 255, 0.4) 38%,
-    rgba(250, 245, 255, 0.15) 62%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle at center,
+      rgba(238, 224, 255, 0.65) 0%,
+      rgba(244, 234, 255, 0.4) 38%,
+      rgba(250, 245, 255, 0.15) 62%,
+      rgba(255, 255, 255, 0) 80%);
   filter: blur(52px);
   pointer-events: none;
   z-index: 0;
@@ -111,7 +107,7 @@ body.career-body {
   background: rgba(2, 132, 199, 0.08) !important;
 }
 
-.career-body .wionheader-section .main-menu ul li.active > a {
+.career-body .wionheader-section .main-menu ul li.active>a {
   color: #0284c7 !important;
   background: rgba(2, 132, 199, 0.12) !important;
 }
@@ -160,7 +156,7 @@ body.career-body {
 
 .career-badge:hover {
   border-color: #98a2b3;
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 
 .career-badge .badge-pulse-dot {
@@ -174,9 +170,20 @@ body.career-body {
 }
 
 @keyframes pulseGreen {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(18, 183, 106, 0.5); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(18, 183, 106, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(18, 183, 106, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(18, 183, 106, 0.5);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(18, 183, 106, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(18, 183, 106, 0);
+  }
 }
 
 /* Main Hero Heading */
@@ -243,7 +250,7 @@ body.career-body {
   background: #f8fafc;
   color: #101828;
   border-color: #98a2b3;
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 
 .career-filter-btn.active {
@@ -512,8 +519,13 @@ body.career-body {
 }
 
 @keyframes infiniteTicker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .career-ticker-item {
@@ -709,7 +721,7 @@ body.career-body {
 .career-submit-btn:hover {
   background: #0284c7;
   box-shadow: 0 10px 24px rgba(2, 132, 199, 0.3);
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 
 .career-submit-btn:disabled {
@@ -750,24 +762,24 @@ body.career-body {
     align-items: flex-start;
     gap: 8px;
   }
-  
+
   .career-apply-link {
     margin-top: 4px;
     font-size: 16px;
   }
-  
+
   .career-dialog-inner {
     padding: 24px 20px;
   }
-  
+
   .career-quote-text {
     font-size: 26px !important;
   }
-  
+
   .career-filters-list {
     gap: 8px;
   }
-  
+
   .career-filter-btn {
     padding: 7px 14px;
     font-size: 13.5px;
@@ -809,7 +821,7 @@ body.career-body {
 }
 
 .career-job-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(0px);
   border-color: #e2e8f0;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
@@ -882,7 +894,7 @@ body.career-body {
 .career-apply-btn:hover {
   background: #27272a;
   color: #ffffff !important;
-  transform: translateY(-1px);
+  transform: translateY(0px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
@@ -955,7 +967,7 @@ body.career-body {
 }
 
 .career-stat-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(0px);
   box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
 }
 
@@ -982,6 +994,7 @@ body.career-body {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+
   .career-team-section {
     padding: 44px 28px;
   }
@@ -994,17 +1007,21 @@ body.career-body {
     gap: 18px;
     padding: 22px 20px;
   }
+
   .career-apply-btn {
     width: 100%;
     justify-content: center;
   }
+
   .career-stats-grid {
     grid-template-columns: 1fr;
   }
+
   .career-stat-card {
     min-height: unset;
     padding: 28px 24px;
   }
+
   .career-team-section {
     padding: 32px 20px;
     border-radius: 20px;

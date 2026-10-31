@@ -5,7 +5,7 @@
 .linear-clients-section {
   position: relative;
   background-color: #08090e;
-  background-image: 
+  background-image:
     radial-gradient(ellipse 70% 45% at 50% 60%, rgba(100, 80, 220, 0.16) 0%, rgba(65, 45, 170, 0.07) 50%, rgba(8, 9, 14, 0) 85%),
     radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.12) 0%, rgba(8, 9, 14, 0) 60%),
     radial-gradient(1.5px 1.5px at 15% 25%, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
@@ -154,7 +154,7 @@
 
 .client-logo-item:hover {
   color: #ffffff;
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(0px) scale(1.02);
   filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.45));
 }
 
@@ -306,7 +306,7 @@
   border-color: rgba(255, 255, 255, 0.28);
   color: #ffffff;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 24px rgba(139, 92, 246, 0.35);
-  transform: translateY(-2px);
+  transform: translateY(0px);
 }
 
 .linear-clients-cta:hover .cta-arrow {
@@ -317,11 +317,13 @@
    Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
+
   .linear-vertical-label,
   .linear-brand-mark,
   .linear-section-num {
     display: none;
   }
+
   .clients-logo-row {
     gap: 36px 40px;
   }
@@ -331,22 +333,32 @@
   .linear-clients-section {
     padding: 80px 0 100px 0;
   }
+
   .clients-logo-row {
     gap: 28px 24px;
   }
+
   .client-logo-item {
     font-size: 18px;
     padding: 6px 10px;
   }
-  .ramp-brand, .loom-brand, .vercel-brand, .retool-brand, .raycast-brand {
+
+  .ramp-brand,
+  .loom-brand,
+  .vercel-brand,
+  .retool-brand,
+  .raycast-brand {
     font-size: 18px;
   }
+
   .alan-brand {
     font-size: 20px;
   }
+
   .mercury-brand {
     font-size: 13px;
   }
+
   .linear-horizon-dome {
     width: 170%;
     height: 130px;
@@ -357,15 +369,19 @@
   .linear-clients-section {
     padding: 60px 0 80px 0;
   }
+
   .clients-logo-row {
     gap: 22px 18px;
   }
+
   .linear-clients-title {
     font-size: 28px;
   }
+
   .linear-clients-subtitle {
     margin-bottom: 42px;
   }
+
   .linear-logos-grid {
     margin-bottom: 48px;
   }

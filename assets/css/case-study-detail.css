@@ -309,7 +309,7 @@
 }
 
 .cs-feature-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(0px);
   background: #ffffff;
   border-color: #cbd5e1;
   box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.07);
@@ -555,7 +555,7 @@
 .cs-start-project-btn:hover {
   background: #f1f5f9;
   color: #000000;
-  transform: translateY(-2px);
+  transform: translateY(0px);
   box-shadow: 0 12px 28px rgba(255, 255, 255, 0.2);
 }
 
@@ -692,4 +692,3 @@
     margin-left: 0;
   }
 }
-

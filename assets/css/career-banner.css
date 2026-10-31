@@ -24,7 +24,7 @@
   position: relative;
   border-radius: 28px;
   background-color: #080c17;
-  background-image: 
+  background-image:
     linear-gradient(90deg, rgba(8, 12, 23, 0.94) 0%, rgba(10, 16, 31, 0.84) 50%, rgba(17, 30, 68, 0.4) 100%),
     url('../images/service/services-banner-bg.jpg');
   background-size: cover;
@@ -136,7 +136,7 @@
   color: #080c17 !important;
   border-color: #38bdf8;
   box-shadow: 0 14px 30px -4px rgba(56, 189, 248, 0.4), 0 0 25px rgba(56, 189, 248, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(0px);
 }
 
 .career-banner-btn .career-btn-icon {
@@ -167,7 +167,7 @@
     padding: 44px 40px;
     gap: 30px;
   }
-  
+
   .career-banner-title {
     font-size: 38px;
   }

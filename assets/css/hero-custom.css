@@ -73,7 +73,7 @@ header.hide-header {
   -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
   border-radius: 9999px !important;
   border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 
+  box-shadow:
     0 8px 30px -4px rgba(15, 23, 42, 0.07),
     0 2px 6px -1px rgba(15, 23, 42, 0.03),
     inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95) !important;
@@ -83,7 +83,7 @@ header.hide-header {
 .wionheader-section .main-menu:hover {
   background: rgba(255, 255, 255, 0.86) !important;
   border-color: rgba(255, 255, 255, 1) !important;
-  box-shadow: 
+  box-shadow:
     0 12px 36px -4px rgba(15, 23, 42, 0.1),
     0 4px 10px -2px rgba(15, 23, 42, 0.05),
     inset 0 1px 2px 0 #ffffff !important;
@@ -92,7 +92,7 @@ header.hide-header {
 .wionheader-section.sticky-menu .main-menu {
   background: rgba(255, 255, 255, 0.88) !important;
   border-color: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 
+  box-shadow:
     0 8px 24px -2px rgba(15, 23, 42, 0.08),
     0 2px 6px -1px rgba(15, 23, 42, 0.04),
     inset 0 1px 1px 0 #ffffff !important;
@@ -108,7 +108,7 @@ header.hide-header {
   list-style: none !important;
 }
 
-.wionheader-section .main-menu > ul > li,
+.wionheader-section .main-menu>ul>li,
 .wionheader-section .main-menu ul li {
   margin: 0 !important;
   padding: 0 !important;
@@ -138,10 +138,10 @@ header.hide-header {
 .wionheader-section .main-menu ul li a:hover {
   color: #0284c7 !important;
   background: rgba(2, 132, 199, 0.08) !important;
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 
-.wionheader-section .main-menu ul li.active > a,
+.wionheader-section .main-menu ul li.active>a,
 .wionheader-section .main-menu ul li a.active {
   color: #0284c7 !important;
   background: rgba(2, 132, 199, 0.12) !important;
@@ -219,7 +219,7 @@ header.hide-header {
   color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.45) !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.3), inset 0 1px 1.5px rgba(255, 255, 255, 0.35) !important;
-  transform: translateY(-2px) !important;
+  transform: translateY(0px) !important;
 }
 
 .wionheader-section .wiondefault-btn.wionheader-btn:hover::after {
@@ -324,15 +324,19 @@ header.hide-header {
   0% {
     transform: scale(1.02) translate3d(0, 0, 0) rotate(0deg);
   }
+
   25% {
     transform: scale(1.06) translate3d(-18px, -14px, 0) rotate(0.4deg);
   }
+
   50% {
     transform: scale(1.08) translate3d(16px, -22px, 0) rotate(-0.3deg);
   }
+
   75% {
     transform: scale(1.05) translate3d(22px, 12px, 0) rotate(0.3deg);
   }
+
   100% {
     transform: scale(1.03) translate3d(-12px, 16px, 0) rotate(-0.2deg);
   }
@@ -342,9 +346,11 @@ header.hide-header {
   0% {
     transform: scale(1) translateY(0);
   }
+
   50% {
     transform: scale(1.035) translateY(-12px);
   }
+
   100% {
     transform: scale(1.015) translateY(8px);
   }
@@ -371,12 +377,15 @@ header.hide-header {
     transform: translateX(0) scaleX(0.6);
     opacity: 0;
   }
+
   15% {
     opacity: 0.9;
   }
+
   75% {
     opacity: 0.9;
   }
+
   100% {
     transform: translateX(250%) scaleX(1.4);
     opacity: 0;
@@ -422,21 +431,45 @@ header.hide-header {
 }
 
 @keyframes orbFloat1 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(45px, -35px, 0) scale(1.15); }
-  100% { transform: translate3d(-35px, 25px, 0) scale(0.92); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(45px, -35px, 0) scale(1.15);
+  }
+
+  100% {
+    transform: translate3d(-35px, 25px, 0) scale(0.92);
+  }
 }
 
 @keyframes orbFloat2 {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(-55px, 30px, 0) scale(1.2); }
-  100% { transform: translate3d(40px, -40px, 0) scale(0.88); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-55px, 30px, 0) scale(1.2);
+  }
+
+  100% {
+    transform: translate3d(40px, -40px, 0) scale(0.88);
+  }
 }
 
 @keyframes orbFloat3 {
-  0% { transform: translate3d(0, 0, 0) scale(0.92); }
-  50% { transform: translate3d(35px, -45px, 0) scale(1.12); }
-  100% { transform: translate3d(-30px, 20px, 0) scale(1.06); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+
+  50% {
+    transform: translate3d(35px, -45px, 0) scale(1.12);
+  }
+
+  100% {
+    transform: translate3d(-30px, 20px, 0) scale(1.06);
+  }
 }
 
 /* Luminous Horizon Glow (Centred at vanishing point) */
@@ -460,6 +493,7 @@ header.hide-header {
     opacity: 0.4;
     transform: translate(-50%, -50%) scale(0.95);
   }
+
   100% {
     opacity: 0.8;
     transform: translate(-50%, -50%) scale(1.08);
@@ -536,11 +570,13 @@ header.hide-header {
   .hero-container-inner {
     max-width: 1680px;
   }
+
   .hero-banner-title {
     font-size: 94px !important;
     max-width: 1360px !important;
     line-height: 1.08 !important;
   }
+
   .hero-banner-subtitle {
     font-size: 22px !important;
     max-width: 1020px !important;
@@ -586,5 +622,3 @@ header.hide-header {
     padding: 0 4px;
   }
 }
-
-

@@ -8,7 +8,7 @@
   position: relative;
   width: 100%;
   background-color: #ffffff !important;
-  background-image: 
+  background-image:
     radial-gradient(ellipse 72% 90% at 88% 50%, rgba(148, 163, 184, 0.52) 0%, rgba(203, 213, 225, 0.62) 28%, rgba(226, 232, 240, 0.42) 52%, rgba(255, 255, 255, 0) 80%),
     radial-gradient(circle at 95% 85%, rgba(100, 116, 139, 0.35) 0%, rgba(203, 213, 225, 0.4) 35%, rgba(255, 255, 255, 0) 68%),
     linear-gradient(112deg, #ffffff 30%, #f8fafc 50%, #e2e8f0 70%, #cbd5e1 88%, #d5e0ec 100%) !important;
@@ -162,7 +162,7 @@ body {
 }
 
 .about-hero-badge-wrap:hover {
-  transform: translateY(-4px);
+  transform: translateY(0px);
 }
 
 .about-hero-badge-img {
@@ -176,6 +176,7 @@ body {
    6. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
+
   .trynix-about-hero-section,
   .trynix-page-hero-section {
     padding: 160px 0 65px;
@@ -222,6 +223,7 @@ body {
 }
 
 @media (max-width: 767px) {
+
   .trynix-about-hero-section,
   .trynix-page-hero-section {
     padding: 135px 0 55px;
@@ -264,8 +266,8 @@ body {
    7. Page Hero Transition Normalizations
    -------------------------------------------------------------------------- */
 /* When hero section is present before wionabout-section1 (Services/Blogs), remove redundant 210px header clearance */
-.trynix-about-hero-section + .wionabout-section1,
-.trynix-page-hero-section + .wionabout-section1 {
+.trynix-about-hero-section+.wionabout-section1,
+.trynix-page-hero-section+.wionabout-section1 {
   padding-top: clamp(40px, 5vw, 75px) !important;
 }
 
@@ -276,8 +278,8 @@ body {
 }
 
 /* Career page: proper spacing for filters/jobs below hero */
-.trynix-about-hero-section + .career-jobs-section,
-.trynix-page-hero-section + .career-jobs-section {
+.trynix-about-hero-section+.career-jobs-section,
+.trynix-page-hero-section+.career-jobs-section {
   padding-top: clamp(30px, 4vw, 55px) !important;
 }
 
@@ -350,7 +352,7 @@ body {
 }
 
 .capability-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(0px);
   background-color: #f1f4f9;
   border-color: rgba(59, 130, 246, 0.16);
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
@@ -527,7 +529,7 @@ body {
 
 .statement-btn:hover {
   background-color: #1e293b;
-  transform: translateY(-2px);
+  transform: translateY(0px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
   color: #ffffff !important;
 }
@@ -711,7 +713,7 @@ body {
 }
 
 .who-gallery-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(0px);
   border-color: rgba(59, 130, 246, 0.2);
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.07);
 }
@@ -893,7 +895,7 @@ body {
   direction: rtl;
 }
 
-.mv-story-block.reversed > * {
+.mv-story-block.reversed>* {
   direction: ltr;
 }
 
@@ -1144,7 +1146,7 @@ body {
 }
 
 .value-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(0px);
   border-color: #cbd5e1;
   box-shadow: 0 18px 36px -10px rgba(15, 23, 42, 0.08);
 }
@@ -1212,12 +1214,15 @@ body {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
   .mv-story-block.reversed {
     direction: ltr;
   }
+
   .mv-media-card {
     height: 320px;
   }
+
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -1228,20 +1233,17 @@ body {
   .mv-highlights-grid {
     grid-template-columns: 1fr;
   }
+
   .mv-media-card {
     height: 260px;
   }
+
   .values-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .value-card {
     padding: 28px 24px;
   }
 }
-
-
-
-
-
-

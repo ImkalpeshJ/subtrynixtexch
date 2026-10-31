@@ -25,7 +25,7 @@ body.services-page-body {
   left: 0 !important;
   right: 0 !important;
   background-color: #00030a !important;
-  background-image: 
+  background-image:
     linear-gradient(180deg, rgba(0, 3, 10, 0.35) 0%, rgba(0, 3, 10, 0) 45%, rgba(0, 3, 10, 0.15) 100%),
     url('../images/service/services-hero-banner.png') !important;
   background-size: cover !important;
@@ -93,6 +93,7 @@ body.services-page-body {
 }
 
 @media (max-width: 991px) {
+
   #services-hero,
   .services-hero-dark {
     padding: 160px 0 70px !important;
@@ -100,6 +101,7 @@ body.services-page-body {
 }
 
 @media (max-width: 767px) {
+
   #services-hero,
   .services-hero-dark {
     padding: 135px 0 60px !important;
@@ -154,7 +156,7 @@ body.services-page-body {
   width: 116%;
   height: 116%;
   background-color: #080c17;
-  background-image: 
+  background-image:
     linear-gradient(90deg, rgba(8, 12, 23, 0.95) 0%, rgba(10, 16, 31, 0.86) 48%, rgba(17, 30, 68, 0.4) 100%),
     url('../images/service/services-banner-bg.jpg');
   background-size: cover;
@@ -170,9 +172,11 @@ body.services-page-body {
   0% {
     transform: scale(1.02) translate3d(0, 0, 0);
   }
+
   50% {
     transform: scale(1.08) translate3d(-24px, -14px, 0);
   }
+
   100% {
     transform: scale(1.04) translate3d(16px, 10px, 0);
   }
@@ -199,10 +203,12 @@ body.services-page-body {
     transform: translate3d(0, 0, 0) scale(0.95);
     opacity: 0.6;
   }
+
   50% {
     transform: translate3d(-45px, 18px, 0) scale(1.15);
     opacity: 0.95;
   }
+
   100% {
     transform: translate3d(25px, -15px, 0) scale(1.05);
     opacity: 0.75;
@@ -228,12 +234,15 @@ body.services-page-body {
     transform: translateX(0);
     opacity: 0;
   }
+
   20% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(340%);
     opacity: 0;
@@ -544,7 +553,7 @@ body.services-page-body {
   .services-banner {
     padding: 52px 0;
   }
-  
+
   .services-banner-title {
     font-size: 36px;
   }
@@ -643,6 +652,7 @@ body.services-page-body {
 
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
+
   .service-accordion-body,
   .service-toggle-icon,
   .service-accordion-header,
@@ -717,7 +727,7 @@ body.services-page-body {
   background-color: #0f172a;
   border-color: #0f172a;
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(0px);
   box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.22);
 }
 
@@ -742,4 +752,3 @@ body.services-page-body {
     font-size: 15px;
   }
 }
-
