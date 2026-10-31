@@ -1,0 +1,713 @@
+/* ==========================================================================
+   TrynixTech — Contact Us Page Design System
+   Crafted in TrynixTech's signature Studio design language:
+   - Cohesive Satoshi typography & architectural spacing
+   - Clean #ffffff canvas flowing seamlessly beneath the TrynixTech Hero Banner
+   - 2-Column Studio Layout with Left Editorial Info Grid & Right Form Card
+   - Interactive 4-Service Choice Chips
+   - Phone input with Indian flag prefix badge
+   - File attachment dropzone box
+   - Signature TrynixTech studio dark button (#09090b) with hover slide
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Global Reset for Contact Page
+   -------------------------------------------------------------------------- */
+html,
+body,
+body.contact-page-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  background-color: #ffffff !important;
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #09090b;
+}
+
+/* --------------------------------------------------------------------------
+   1. Contact Us Main Section (Directly Below TrynixTech Page Hero Banner)
+   -------------------------------------------------------------------------- */
+.trynix-contact-section,
+.contact-hero-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(55px, 6.5vw, 90px) 0 clamp(85px, 9.5vw, 130px);
+  overflow: hidden;
+  isolation: isolate;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Fluid subtle architectural contour curves in background */
+.contact-bg-contours {
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  width: 680px;
+  height: 580px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+.contact-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 2-Column Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 460px) minmax(480px, 1fr);
+  gap: clamp(40px, 5.5vw, 76px);
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   2. Left Column: Editorial & Info Grid
+   -------------------------------------------------------------------------- */
+.contact-left-col {
+  padding-top: 8px;
+}
+
+/* Eyebrow Tag: / GET IN TOUCH */
+.contact-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #71717a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Headline: Turn Your Ideas Into Reality */
+.contact-hero-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(34px, 3.8vw, 50px);
+  font-weight: 700;
+  color: #09090b;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px 0;
+}
+
+/* Description Text */
+.contact-hero-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+  color: #52525b;
+  margin: 0 0 36px 0;
+  max-width: 440px;
+}
+
+/* Divider Line */
+.contact-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e4e4e7;
+  margin-bottom: 36px;
+}
+
+/* Contact Info List (Vertical Format) */
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-info-icon-box {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #09090b;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.03);
+}
+
+.contact-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-label {
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 4px;
+}
+
+.contact-info-val {
+  font-family: 'SatoshiBold', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #09090b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.contact-info-val a {
+  color: #09090b;
+  text-decoration: none;
+}
+
+.contact-info-val a:hover {
+  color: #09090b;
+  text-decoration: none;
+}
+
+/* Follow Us Row */
+.contact-follow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-follow-title {
+  font-family: 'SatoshiBold', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #09090b;
+  margin: 0;
+}
+
+.contact-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(9, 9, 11, 0.04);
+}
+
+.contact-social-btn:hover {
+  background-color: #09090b;
+  border-color: #09090b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(9, 9, 11, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   3. Right Column: Floating Form Card
+   -------------------------------------------------------------------------- */
+.contact-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 24px;
+  padding: clamp(32px, 3.8vw, 48px);
+  box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.03);
+  position: relative;
+}
+
+/* Card Header: Badge + SLA Notice */
+.form-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.form-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-badge-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SatoshiBold', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #09090b;
+}
+
+.form-badge-text {
+  font-family: 'SatoshiBold', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #52525b;
+  text-transform: uppercase;
+}
+
+.form-sla-text {
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 13px;
+  color: #71717a;
+  text-align: right;
+}
+
+.form-card-title {
+  font-family: 'SatoshiBold', 'Satoshi', sans-serif;
+  font-size: clamp(24px, 2.3vw, 29px);
+  font-weight: 700;
+  color: #09090b;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin: 0 0 6px 0;
+}
+
+.form-card-subtitle {
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 14.5px;
+  color: #71717a;
+  line-height: 1.55;
+  margin: 0 0 32px 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Form Elements & Inputs
+   -------------------------------------------------------------------------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.form-row-full {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-label {
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #18181b;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.form-req-star {
+  color: #ef4444;
+  margin-left: 3px;
+}
+
+.form-text-input {
+  width: 100%;
+  height: 48px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 14.5px;
+  color: #09090b;
+  outline: none;
+  transition: all 0.22s ease;
+  box-sizing: border-box;
+}
+
+.form-text-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-text-input:focus {
+  background-color: #ffffff;
+  border-color: #09090b;
+  box-shadow: 0 0 0 3px rgba(9, 9, 11, 0.08);
+}
+
+/* Phone Field Group with Country Prefix */
+.form-phone-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.form-country-badge {
+  height: 48px;
+  padding: 0 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #18181b;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.form-flag-icon {
+  width: 18px;
+  height: 13px;
+  border-radius: 2px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.form-chevron {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* --------------------------------------------------------------------------
+   5. "What are you looking for?" Option Chips
+   -------------------------------------------------------------------------- */
+.form-services-selector {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.choice-chip {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.choice-chip input[type="checkbox"],
+.choice-chip input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.choice-chip-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 84px;
+  padding: 12px 14px;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.choice-chip:hover .choice-chip-inner {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.choice-chip-icon {
+  width: 24px;
+  height: 24px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.choice-chip-label {
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #18181b;
+  line-height: 1.25;
+  transition: color 0.2s ease;
+}
+
+/* Selected state (matching TrynixTech studio signature style) */
+.choice-chip input:checked + .choice-chip-inner,
+.choice-chip.is-selected .choice-chip-inner {
+  background-color: #ffffff;
+  border-color: #09090b;
+  box-shadow: 0 4px 14px rgba(9, 9, 11, 0.08);
+}
+
+.choice-chip input:checked + .choice-chip-inner .choice-chip-icon,
+.choice-chip.is-selected .choice-chip-icon {
+  color: #09090b;
+}
+
+.choice-chip input:checked + .choice-chip-inner .choice-chip-label,
+.choice-chip.is-selected .choice-chip-label {
+  color: #09090b;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   6. Project Description Textarea
+   -------------------------------------------------------------------------- */
+.form-textarea {
+  width: 100%;
+  min-height: 110px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 14.5px;
+  color: #09090b;
+  outline: none;
+  resize: vertical;
+  transition: all 0.22s ease;
+  box-sizing: border-box;
+}
+
+.form-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-textarea:focus {
+  background-color: #ffffff;
+  border-color: #09090b;
+  box-shadow: 0 0 0 3px rgba(9, 9, 11, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   7. File Attachment Box
+   -------------------------------------------------------------------------- */
+.form-attach-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background-color: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.form-attach-box:hover {
+  background-color: #fcfcfc;
+  border-color: #09090b;
+}
+
+.form-attach-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+  flex-shrink: 0;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.form-attach-box:hover .form-attach-icon-wrap {
+  color: #09090b;
+  border-color: #09090b;
+}
+
+.form-attach-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-attach-title {
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #18181b;
+  margin-bottom: 2px;
+}
+
+.form-attach-sub {
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 12px;
+  color: #71717a;
+}
+
+.form-file-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.form-file-selected-name {
+  display: none;
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 12.5px;
+  color: #09090b;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Submit Button
+   -------------------------------------------------------------------------- */
+.contact-submit-btn {
+  width: 100%;
+  height: 52px;
+  background-color: #09090b;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: 'SatoshiBold', 'Satoshi', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(9, 9, 11, 0.12);
+  outline: none;
+}
+
+.contact-submit-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.contact-submit-btn:hover {
+  background-color: #18181b;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(9, 9, 11, 0.25);
+}
+
+.contact-submit-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.contact-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Success notification message */
+.form-success-banner {
+  display: none;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  color: #065f46;
+  font-family: 'SatoshiMedium', sans-serif;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-hero-desc {
+    max-width: 100%;
+  }
+
+  .trynix-contact-section,
+  .contact-hero-section {
+    padding: 50px 0 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trynix-contact-section,
+  .contact-hero-section {
+    padding: 40px 0 65px;
+  }
+
+  .contact-hero-title {
+    font-size: 32px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-choice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-info-grid {
+    gap: 20px;
+  }
+
+  .form-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .form-sla-text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .form-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}

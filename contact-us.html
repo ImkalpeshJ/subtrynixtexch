@@ -28,9 +28,12 @@
   <!-- Code Editor  -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/app.min.css">
+  <link rel="stylesheet" href="assets/css/about-hero.css">
+  <link rel="stylesheet" href="assets/css/contact-page.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
-<body>
+<body class="contact-page-body">
 
   <div class="preloader">
     <div class="preloader-inner">
@@ -90,8 +93,8 @@
           <li>
             <a href="career.html">Careers</a>
           </li>
-          <li>
-            <a href="contact-us.html">Contact Us</a>
+          <li class="active">
+            <a href="contact-us.html" class="active">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -134,8 +137,8 @@
                 <li>
                   <a href="career.html">Careers</a>
                 </li>
-                <li>
-                  <a href="contact-us.html">Contact Us</a>
+                <li class="active">
+                  <a href="contact-us.html" class="active">Contact Us</a>
                 </li>
               </ul>
             </nav>
@@ -167,268 +170,461 @@
   <!-- End mobile menu -->
 
 
-  <section class="wionabout-section1 wiondefault-bg">
-    <div class="container">
-      <div class="wionsection-title center">
-        <div class="wionsub-title aos-init" data-aos-delay="400" data-aos="fade-up">
-          <p>Connect With Us, We're Here to Help</p>
-        </div>
-        <h1 class="aos-init" data-aos-delay="500" data-aos="fade-up">Contact us</h1>
-      </div>
-      <div class="wioncontact-box aos-init" data-aos-delay="700" data-aos="fade-up">
-        <div class="wioncontact-title">
-          <h4>Have a project in mind? Fill out the form below:</h4>
-        </div>
-        <form action="#">
-          <div class="row">
-            <div class="col-lg-6 ">
-              <div class="wionmain-field">
-                <h6>Name</h6>
-                <input type="text" placeholder="First name">
-              </div>
-            </div>
-            <div class="col-lg-6 ">
-              <div class="wionmain-field">
-                <div class="mt-34">
-                  <input type="text" placeholder="Last name">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="wionmain-field">
-                <h6>Email</h6>
-                <input type="email" placeholder="Your email">
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="wionmain-field">
-                <h6>Phone</h6>
-                <input type="text" placeholder="Phone number">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="wionmain-field">
-                <h6>Subject</h6>
-                <input type="email" placeholder="Subject description">
-              </div>
-            </div>
-          </div>
-          <div class="wionmain-field-textarea">
-            <h6>Message</h6>
-            <textarea class="button-text" name="textarea" placeholder="Let us know about your project"></textarea>
-          </div>
-          <button class="wiondefault-btn submit-btn mt-50">Submit message
-            <span class="wionbutton-icon">
-                        <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                        <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                    </span>
-          </button>
-        </form>
-      </div>
+  <!-- ==========================================================================
+       TrynixTech — Contact Hero Section (Referencing "About Us" Hero Banner)
+       ========================================================================== -->
+  <section class="trynix-about-hero-section trynix-page-hero-section" id="contact-hero">
+    <div class="hero-container-fluid">
+      <div class="about-hero-layout page-hero-layout">
+        <!-- Content Column (Left) -->
+        <div class="about-hero-content page-hero-content">
+          <!-- Eyebrow Tag -->
+          <span class="about-hero-eyebrow" data-aos="fade-up" data-aos-duration="600">GET IN TOUCH</span>
 
+          <!-- Main Display Headline (H1) -->
+          <h1 class="about-hero-headline page-hero-headline" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+            Let's build something<br>remarkable together.
+          </h1>
+
+          <!-- Section Sub-headline (H2) -->
+          <h2 class="about-hero-subheadline page-hero-subheadline" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+            Whether you have an upcoming project, need expert engineering and design guidance, or want to explore how our team can scale your digital product — we're here to help you every step of the way.
+          </h2>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- end hero -->
+  <!-- End Contact Hero Section -->
 
-  <div class="white-speech"></div>
-  <footer class="wionfooter-section">
-    <div class="wiondefault-bg wioncta-section bg-heading overflow-hidden">
-      <div class="fixed-height">
-        <div class="wioncta-slider-init">
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+
+  <!-- ==========================================================================
+       TrynixTech — Studio Contact & Inquiry Section
+       ========================================================================== -->
+  <section class="trynix-contact-section" id="contact">
+    <!-- Subtle fluid background contours in top-left -->
+    <div class="contact-bg-contours" aria-hidden="true">
+      <svg width="680" height="580" viewBox="0 0 680 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-80 60 C120 -20 320 80 440 240 C540 370 560 520 480 620" stroke="#e2e8f0" stroke-width="1.2" stroke-opacity="0.7" fill="none" />
+        <path d="M-120 140 C100 60 280 160 400 320 C480 430 490 560 420 640" stroke="#cbd5e1" stroke-width="1.2" stroke-opacity="0.5" fill="none" />
+        <path d="M-60 220 C140 180 260 260 360 400 C430 500 420 600 360 660" stroke="#e2e8f0" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="4 6" fill="none" />
+        <path d="M-140 0 C60 -60 240 20 380 180 C480 300 520 460 460 580" stroke="#e2e8f0" stroke-width="1.5" stroke-opacity="0.4" fill="none" />
+      </svg>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-grid">
+
+        <!-- ------------------------------------------------------------------
+             Left Column: Editorial & Info Grid
+             ------------------------------------------------------------------ -->
+        <div class="contact-left-col">
+          <!-- Eyebrow Tag -->
+          <span class="contact-eyebrow">/ START A PROJECT</span>
+
+          <!-- Main Title -->
+          <h1 class="contact-hero-title">Turn Your Ideas<br>Into Reality</h1>
+
+          <!-- Description Paragraph -->
+          <p class="contact-hero-desc">
+            Whether you need a stunning website, a user-focused design, or an AI-powered solution &mdash; our team is here to help you at every step.
+          </p>
+
+          <!-- Divider -->
+          <div class="contact-divider" aria-hidden="true"></div>
+
+          <!-- Contact Info List (Vertical Format) -->
+          <div class="contact-info-grid">
+            <!-- Card 1: Call Us -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-info-label">Call Us</span>
+                <p class="contact-info-val"><a href="tel:+917038839010">+91 70388 39010</a></p>
+              </div>
+            </div>
+
+            <!-- Card 2: Email Us -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-info-label">Email Us</span>
+                <p class="contact-info-val"><a href="mailto:contact@trynixtech.in">contact@trynixtech.in</a></p>
+              </div>
+            </div>
+
+            <!-- Card 3: Our Office -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-info-label">Our Office</span>
+                <p class="contact-info-val">Pune, Maharashtra, India</p>
+              </div>
+            </div>
+
+            <!-- Card 4: Working Hours -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-info-label">Working Hours</span>
+                <p class="contact-info-val">Mon - Fri<br>09:00 AM - 6:00 PM</p>
+              </div>
             </div>
           </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+
+          <!-- Follow Us Row -->
+          <div class="contact-follow-wrap">
+            <span class="contact-follow-title">Follow Us</span>
+            <div class="contact-social-icons">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/trynixtech" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.78a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/trynixtech?xtok=ZjdlMjJwc2R2bHR0" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Instagram">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- X (Twitter) -->
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="X (Twitter)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <!-- GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="fixed-height">
-        <div class="wioncta-slider-init2" dir="rtl">
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+
+        <!-- ------------------------------------------------------------------
+             Right Column: Floating Form Card
+             ------------------------------------------------------------------ -->
+        <div class="contact-right-col">
+          <div class="contact-form-card">
+
+            <!-- Card Header: Badge + SLA Notice -->
+            <div class="form-card-top">
+              <div class="form-badge">
+                <span class="form-badge-num">01</span>
+                <span class="form-badge-text">SEND US A MESSAGE</span>
+              </div>
+              <span class="form-sla-text">We typically reply within 1 business day.</span>
             </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+
+            <!-- Card Titles -->
+            <h2 class="form-card-title">Tell us about your project</h2>
+            <p class="form-card-subtitle">Fill out the form and our team will get back to you soon.</p>
+
+            <!-- Success Notification (shown after submit) -->
+            <div class="form-success-banner" id="contactSuccessMsg">
+              ✓ Thank you! Your message has been sent successfully. Our team will contact you shortly.
             </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
+
+            <!-- Form -->
+            <form class="contact-form" id="contactUsForm">
+              
+              <!-- Row 1: First Name & Last Name -->
+              <div class="form-row-2col">
+                <div class="form-field-group">
+                  <label class="form-field-label" for="firstName">First name <span class="form-req-star">*</span></label>
+                  <input type="text" id="firstName" name="firstName" class="form-text-input" placeholder="First name" required>
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label" for="lastName">Last name <span class="form-req-star">*</span></label>
+                  <input type="text" id="lastName" name="lastName" class="form-text-input" placeholder="Last name" required>
+                </div>
+              </div>
+
+              <!-- Row 2: Work Email & Phone Number -->
+              <div class="form-row-2col">
+                <div class="form-field-group">
+                  <label class="form-field-label" for="workEmail">Work email <span class="form-req-star">*</span></label>
+                  <input type="email" id="workEmail" name="workEmail" class="form-text-input" placeholder="you@company.com" required>
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label" for="phoneNumber">Phone number</label>
+                  <div class="form-phone-group">
+                    <div class="form-country-badge" title="India (+91)">
+                      <svg class="form-flag-icon" viewBox="0 0 640 480" width="18" height="13">
+                        <path fill="#f93" d="M0 0h640v160H0z"/>
+                        <path fill="#fff" d="M0 160h640v160H0z"/>
+                        <path fill="#128807" d="M0 320h640v160H0z"/>
+                        <circle cx="320" cy="240" r="40" fill="#008"/>
+                        <circle cx="320" cy="240" r="35" fill="#fff"/>
+                        <circle cx="320" cy="240" r="8" fill="#008"/>
+                      </svg>
+                      <span>+91</span>
+                      <span class="form-chevron" aria-hidden="true">&#9662;</span>
+                    </div>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-text-input" placeholder="70388 39010">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: Company Name -->
+              <div class="form-row-full">
+                <div class="form-field-group">
+                  <label class="form-field-label" for="companyName">Company name</label>
+                  <input type="text" id="companyName" name="companyName" class="form-text-input" placeholder="Your company or brand">
+                </div>
+              </div>
+
+              <!-- Row 4: What are you looking for? (Option Chips) -->
+              <div class="form-services-selector">
+                <label class="form-field-label">What are you looking for? <span class="form-req-star">*</span></label>
+                <div class="form-choice-grid">
+                  
+                  <!-- Chip 1: Website Development (Default Checked) -->
+                  <label class="choice-chip is-selected" id="chip-web">
+                    <input type="checkbox" name="services" value="Website Development" checked>
+                    <div class="choice-chip-inner">
+                      <div class="choice-chip-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                          <line x1="8" y1="21" x2="16" y2="21"></line>
+                          <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                      </div>
+                      <span class="choice-chip-label">Website<br>Development</span>
+                    </div>
+                  </label>
+
+                  <!-- Chip 2: UI/UX Design -->
+                  <label class="choice-chip" id="chip-ui">
+                    <input type="checkbox" name="services" value="UI/UX Design">
+                    <div class="choice-chip-inner">
+                      <div class="choice-chip-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                          <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                          <path d="M2 2l7.586 7.586"></path>
+                          <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                      </div>
+                      <span class="choice-chip-label">UI/UX<br>Design</span>
+                    </div>
+                  </label>
+
+                  <!-- Chip 3: AI Solutions -->
+                  <label class="choice-chip" id="chip-ai">
+                    <input type="checkbox" name="services" value="AI Solutions">
+                    <div class="choice-chip-inner">
+                      <div class="choice-chip-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                          <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                      </div>
+                      <span class="choice-chip-label">AI<br>Solutions</span>
+                    </div>
+                  </label>
+
+                  <!-- Chip 4: Other (Consultation) -->
+                  <label class="choice-chip" id="chip-other">
+                    <input type="checkbox" name="services" value="Other (Consultation)">
+                    <div class="choice-chip-inner">
+                      <div class="choice-chip-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                      </div>
+                      <span class="choice-chip-label">Other<br>(Consultation)</span>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Row 5: Tell us more about your project -->
+              <div class="form-row-full">
+                <div class="form-field-group">
+                  <label class="form-field-label" for="projectDescription">Tell us more about your project <span class="form-req-star">*</span></label>
+                  <textarea id="projectDescription" name="projectDescription" class="form-textarea" placeholder="Give a brief summary of what you are looking to build or design..." required></textarea>
+                </div>
+              </div>
+
+              <!-- Row 6: Attach files (optional) -->
+              <div class="form-attach-box" onclick="document.getElementById('contactFileUpload').click();">
+                <div class="form-attach-icon-wrap" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                  </svg>
+                </div>
+                <div class="form-attach-info">
+                  <span class="form-attach-title">Attach files (optional)</span>
+                  <span class="form-attach-sub">PDF, DOC, PPT or images up to 10MB</span>
+                  <span class="form-file-selected-name" id="selectedFileName"></span>
+                </div>
+                <input type="file" id="contactFileUpload" class="form-file-hidden" accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg">
+              </div>
+
+              <!-- Row 7: Submit CTA -->
+              <button type="submit" class="contact-submit-btn" id="contactSubmitBtn">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+            </form>
           </div>
         </div>
-      </div>
-      <div class="wioncta-btn mt-80">
-        <a class='wiondefault-btn white-outline aos-init' data-aos-delay='500' data-aos='fade-up' href="contact-us.html">Schedule a call
-          <span class="wionbutton-icon">
-                  <img class="arry1" src="assets/images/svg/arrow-white.svg" alt="">
-                  <img class="arry2" src="assets/images/svg/arrow-white.svg" alt="">
-              </span>
-        </a>
+
       </div>
     </div>
-    <div class="footer-sticky">
-      <div class="container">
-        <div class="wionfooter-top">
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="wionfooter-textarea">
-                <div class="wionsub-title">
-                  <p>Get in touch</p>
-                </div>
-                <a href="mailto:name@gmail.com">
-                  <h2>contact@<br>trynixtech.in</h2>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-5 offset-xl-1">
-              <div class="wionfooter-menu-wraper pl-30">
-                <div class="wionfooter-menu">
-                  <h4>Navigation</h4>
-                  <ul>
-                    <li>
-                      <a href='/'>Home</a>
-                    </li>
-                    <li>
-                      <a href="portfolio.html">Work</a>
-                    </li>
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li>
-                      <a href="blog.html">Articles</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="wionfooter-menu">
-                  <h4>Other</h4>
-                  <ul>
-                    <li>
-                      <a href="faq.html">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="pricing.html">Pricing</a>
-                    </li>
-                    <li>
-                      <a href="team.html">Team</a>
-                    </li>
-                    <li>
-                      <a href="contact-us.html">Contact</a>
-                    </li>
-                    <li>
-                      <a href="error-404.html"></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="wionfooter-menu">
-                  <h4>Follow us</h4>
-                  <ul>
-                    <li>
-                      <a href="https://www.instagram.com/trynixtech?igsh=ZjdlMjJwc2R2bHR0">Instagram</a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/in/trynix-tech-b47921391/">LinkedIn</a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/"></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  </section>
 
+  <!-- ==========================================================================
+       TrynixTech — Studio Dark Architectural Footer (Home Page Footer)
+       ========================================================================== -->
+  <footer class="trynix-footer-section">
+    <div class="trynix-footer-container">
+      <!-- Top Row: Brand & Contact + What We Do Services -->
+      <div class="trynix-footer-top">
+        <!-- Left: Brand Logo, Tagline, Email, Pune Location & Social Media Icons -->
+        <div class="trynix-footer-left">
+          <!-- TrynixTech Logo (Matching Header Logo) -->
+          <a href="/" class="trynix-footer-brand-logo" aria-label="TrynixTech Home">
+            <img src="assets/images/logo/logo-white.svg" alt="TRYNIXTECH" class="trynix-footer-logo-img" width="143" height="24">
+          </a>
+
+          <!-- Studio Mission Tagline -->
+          <p class="trynix-footer-tagline">
+            AI, technology, creativity, engineering, and UI/UX come together to build intelligent digital experiences—where innovation meets what’s next.
+          </p>
+
+          <!-- Contact Details (Mail + Pune Location with SVGs) -->
+          <div class="trynix-footer-contact-list">
+            <!-- Mail Address -->
+            <div class="trynix-contact-item">
+              <span class="trynix-contact-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <a href="mailto:contact@trynixtech.in" class="trynix-contact-link">contact@trynixtech.in</a>
+            </div>
+
+            <!-- Pune Location -->
+            <div class="trynix-contact-item">
+              <span class="trynix-contact-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="trynix-contact-text">Pune · India</span>
             </div>
           </div>
-        </div>
-        <div class="wionfooter-bottom-wrap">
-          <div class="wionfooter-logo">
-            <a href='/'>
-              <img src="assets/images/logo/logo-dark.svg" alt="Foote Logo">
+
+          <!-- Social Media Icons (Circular buttons: LinkedIn, Instagram, X) -->
+          <div class="trynix-footer-socials">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/trynixtech" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.78a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/trynixtech?xtok=ZjdlMjJwc2R2bHR0" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
             </a>
           </div>
-          <div class="wionfooter-bottom-text">
-            <p>© Copyright 2026, All Rights Reserved by TrynixTech</p>
+        </div>
+
+        <!-- Right: 2-Column Links Grid (WHAT WE DO + COMPANY) -->
+        <div class="trynix-footer-nav-grid">
+          <!-- Column 1: WHAT WE DO -->
+          <div class="trynix-footer-nav-col">
+            <h4>WHAT WE DO</h4>
+            <ul>
+              <li><a href="service.html">Custom Software Development</a></li>
+              <li><a href="service.html">Web &amp; Mobile Applications</a></li>
+              <li><a href="service.html">Cloud Architecture &amp; DevOps</a></li>
+              <li><a href="service.html">AI &amp; Machine Learning</a></li>
+              <li><a href="service.html">Product Design &amp; UX</a></li>
+              <li><a href="service.html">Digital Marketing</a></li>
+              <li><a href="service.html">Content &amp; Creative</a></li>
+              <li class="all-services-link"><a href="service.html">All services <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: COMPANY -->
+          <div class="trynix-footer-nav-col">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="portfolio.html">Our Work</a></li>
+              <li><a href="career.html">Careers</a></li>
+              <li><a href="blog.html">Blog &amp; Insights</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
           </div>
         </div>
+      </div>
+
+      <!-- Middle Divider Line & Overlapping "Get Started" Pill Button -->
+      <div class="trynix-footer-divider-wrap">
+        <div class="trynix-footer-divider-line" aria-hidden="true"></div>
+        <a href="contact-us.html" class="trynix-footer-get-started-btn">Get Started</a>
+      </div>
+
+      <!-- Sub-Bar: Brand Mission Description & Legal Links -->
+      <div class="trynix-footer-sub-bar">
+        <p class="trynix-footer-mission">
+          From branding to digital engineering. Our expert team is here to elevate your brand and connect you with your audience
+        </p>
+        <div class="trynix-footer-legal-links">
+          <a href="#">TERMS &amp; CONDITIONS</a>
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+
+      <!-- Giant Architectural Text ("Trynixtech") Cropped at Bottom -->
+      <div class="trynix-footer-giant-display" aria-hidden="true">
+        <span class="trynix-footer-giant-title">Trynixtech.</span>
       </div>
     </div>
   </footer>
@@ -468,5 +664,86 @@
   <!-- <script src="assets/js/gsap-scroll-animi.js"></script> -->
 
   <script src="assets/js/app.js"></script>
+
+  <!-- Contact Page Interactive Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. Choice Chips Selection Handling
+      const chips = document.querySelectorAll('.choice-chip');
+      chips.forEach(function (chip) {
+        const input = chip.querySelector('input');
+        if (input) {
+          // Sync initial state
+          if (input.checked) {
+            chip.classList.add('is-selected');
+          } else {
+            chip.classList.remove('is-selected');
+          }
+
+          input.addEventListener('change', function () {
+            if (this.checked) {
+              chip.classList.add('is-selected');
+            } else {
+              chip.classList.remove('is-selected');
+            }
+          });
+        }
+      });
+
+      // 2. File Upload Attachment Name Display
+      const fileInput = document.getElementById('contactFileUpload');
+      const fileNameDisplay = document.getElementById('selectedFileName');
+      if (fileInput && fileNameDisplay) {
+        fileInput.addEventListener('change', function () {
+          if (this.files && this.files.length > 0) {
+            fileNameDisplay.textContent = 'Attached: ' + this.files[0].name;
+            fileNameDisplay.style.display = 'block';
+          } else {
+            fileNameDisplay.textContent = '';
+            fileNameDisplay.style.display = 'none';
+          }
+        });
+      }
+
+      // 3. Form Submission Handling
+      const contactForm = document.getElementById('contactUsForm');
+      const successBanner = document.getElementById('contactSuccessMsg');
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      if (contactForm && successBanner) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            submitBtn.innerHTML = '<span>Sending...</span>';
+          }
+
+          // Simulate fast response
+          setTimeout(function () {
+            successBanner.style.display = 'block';
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.style.opacity = '1';
+              submitBtn.innerHTML = '<span>Message Sent!</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            }
+            contactForm.reset();
+            // Reset chip active state to default
+            chips.forEach(function (c) {
+              const inp = c.querySelector('input');
+              if (inp && inp.defaultChecked) {
+                inp.checked = true;
+                c.classList.add('is-selected');
+              } else {
+                c.classList.remove('is-selected');
+              }
+            });
+            if (fileNameDisplay) {
+              fileNameDisplay.style.display = 'none';
+            }
+          }, 600);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
