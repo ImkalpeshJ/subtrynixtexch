@@ -1,0 +1,760 @@
+/* ==========================================================================
+   TrynixTech — "Case Studies" Section
+   Pixel-Accurate Implementation Matching Reference Design:
+   Outlined Eyebrow, Hairline Divider, 2-Column H1/H2 Header, and 3 Atmospheric Photo Cards with In-Card CTA
+   ========================================================================== */
+
+.case-studies-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 110px 0 130px;
+  overflow: hidden;
+  scroll-margin-top: 100px;
+}
+
+.case-studies-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Eyebrow Tag (Clean Text, No Border Stroke, No Middle Divider)
+   -------------------------------------------------------------------------- */
+.case-studies-tag-wrap {
+  margin-bottom: 0;
+}
+
+.case-studies-eyebrow,
+.case-studies-badge {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0 0 16px 0;
+  line-height: 1;
+}
+
+.case-studies-divider {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Header: Stacked Headline & Subtitle (Directly Below H1/H2)
+   -------------------------------------------------------------------------- */
+.case-studies-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 960px;
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.case-studies-display-title {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 16px 0;
+  max-width: 960px;
+}
+
+.case-studies-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18px);
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: -0.01em;
+  color: #64748b;
+  margin: 0;
+  max-width: 820px;
+}
+
+/* --------------------------------------------------------------------------
+   3. 3-Card Grid Matching Reference Design
+   -------------------------------------------------------------------------- */
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   TrynixTech Design System — Modern Case Study Cards
+   -------------------------------------------------------------------------- */
+.cs-design-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 34px -6px rgba(0, 0, 0, 0.05), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 32px 36px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.cs-design-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 60px -10px rgba(0, 0, 0, 0.12), 0 10px 24px -4px rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+/* Background Visual Artwork (Edge-to-Edge Full Card Cover) */
+.cs-card-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 28px;
+  z-index: 1;
+}
+
+.cs-card-visual .cs-visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-design-card:hover .cs-visual-img {
+  transform: scale(1.035);
+}
+
+/* Card 1 (gloqr): Phone on Podium anchored on right with left legibility fade */
+.cs-card-gloqr .cs-visual-img {
+  object-position: 85% center;
+}
+
+.cs-card-gloqr::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.88) 38%, 
+    rgba(255, 255, 255, 0.25) 65%, 
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Card 2 (Urvisatech): Modern Building anchored bottom right with top legibility fade */
+.cs-card-urvisa .cs-visual-img {
+  object-position: right bottom;
+}
+
+.cs-card-urvisa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64%;
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(255, 255, 255, 0.88) 38%, 
+    rgba(255, 255, 255, 0.3) 68%, 
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Card 3 (SMEonCloud): Laptop anchored in upper right/center with top & bottom fades */
+.cs-card-sme .cs-visual-img {
+  object-position: center 30%;
+}
+
+.cs-card-sme::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.45) 20%,
+    transparent 42%,
+    rgba(255, 255, 255, 0.75) 65%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Content Container (sitting on top of artwork) */
+.cs-card-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+/* For Card 1: Content grouped in middle/bottom, logo at top */
+.cs-card-gloqr .cs-card-content {
+  justify-content: flex-start;
+}
+
+.cs-card-gloqr .cs-card-body {
+  margin-top: 65px;
+  max-width: 58%;
+}
+
+/* For Card 2: All content at top-left */
+.cs-card-urvisa .cs-card-content {
+  justify-content: flex-start;
+  max-width: 76%;
+}
+
+.cs-card-urvisa .cs-card-body {
+  margin-top: 0;
+}
+
+/* For Card 3: Logo at top, Content at bottom */
+.cs-card-sme .cs-card-content {
+  justify-content: space-between;
+}
+
+.cs-card-sme .cs-card-body {
+  margin-top: auto;
+  max-width: 75%;
+}
+
+/* Brand Logos */
+.cs-card-brand {
+  margin-bottom: 8px;
+}
+
+.cs-logo-gloqr {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  color: #e31e24;
+  letter-spacing: -0.04em;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.cs-logo-reg {
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 2px;
+  transform: translateY(2px);
+}
+
+.cs-logo-urvisa {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.cs-logo-urvisa .brand-dark {
+  color: #1a2230;
+}
+
+.cs-logo-urvisa .brand-gold {
+  color: #b8915b;
+}
+
+.cs-logo-sme {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.cs-logo-sme .brand-dark {
+  color: #1a2230;
+}
+
+.cs-logo-sme .brand-orange {
+  color: #f95700;
+  font-family: 'SatoshiBlack', 'SatoshiBold', sans-serif;
+}
+
+/* Accent Horizontal Lines */
+.cs-accent-line {
+  margin-bottom: 20px;
+}
+
+.cs-accent-gloqr {
+  width: 32px;
+  height: 3px;
+  background-color: #e31e24;
+  border-radius: 2px;
+}
+
+.cs-accent-urvisa {
+  width: 34px;
+  height: 2.5px;
+  background-color: #b8915b;
+  border-radius: 2px;
+}
+
+/* Headlines */
+.cs-card-headline {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(23px, 1.85vw, 28px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.028em;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+}
+
+/* CTA Buttons */
+.cs-card-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10.5px 22px;
+  border-radius: 9999px;
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              box-shadow 0.25s ease,
+              color 0.25s ease;
+}
+
+.cs-btn-arrow {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.cs-card-cta-btn:hover .cs-btn-arrow,
+.cs-design-card:hover .cs-card-cta-btn .cs-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Card 1 Button: Vibrant Red */
+.cs-btn-gloqr {
+  background-color: #d81a24;
+  color: #ffffff;
+  border: 1px solid #d81a24;
+  box-shadow: 0 4px 14px rgba(216, 26, 36, 0.26);
+}
+
+.cs-btn-gloqr:hover,
+.cs-card-gloqr:hover .cs-btn-gloqr {
+  background-color: #b8121b;
+  border-color: #b8121b;
+  box-shadow: 0 8px 22px rgba(216, 26, 36, 0.38);
+  transform: translateY(-2px);
+}
+
+/* Card 2 Button: Midnight Charcoal Navy */
+.cs-btn-urvisa {
+  background-color: #141c28;
+  color: #ffffff;
+  border: 1px solid #141c28;
+  box-shadow: 0 4px 14px rgba(20, 28, 40, 0.24);
+}
+
+.cs-btn-urvisa:hover,
+.cs-card-urvisa:hover .cs-btn-urvisa {
+  background-color: #000000;
+  border-color: #000000;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Card 3 Button: Radiant Orange */
+.cs-btn-sme {
+  background-color: #f95700;
+  color: #ffffff;
+  border: 1px solid #f95700;
+  box-shadow: 0 4px 14px rgba(249, 87, 0, 0.26);
+}
+
+.cs-btn-sme:hover,
+.cs-card-sme:hover .cs-btn-sme {
+  background-color: #d94800;
+  border-color: #d94800;
+  box-shadow: 0 8px 22px rgba(249, 87, 0, 0.38);
+  transform: translateY(-2px);
+}
+
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Base Reference Card Component */
+.cs-ref-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 34px 38px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.cs-ref-card:hover {
+  transform: translateY(-6px);
+}
+
+/* --------------------------------------------------------------------------
+   Card 1: What We Do (Deep Dark Olive Charcoal)
+   -------------------------------------------------------------------------- */
+.cs-card-dark {
+  background-color: #1b1f12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.28);
+}
+
+.cs-card-dark:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 28px 65px -12px rgba(0, 0, 0, 0.42);
+}
+
+.cs-card-dark .cs-card-headline {
+  color: #ffffff;
+}
+
+.cs-card-dark .cs-card-narrative {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* --------------------------------------------------------------------------
+   Card 2: Our Impact (Vibrant Electric Lime / Chartreuse with Building Visual)
+   -------------------------------------------------------------------------- */
+.cs-card-lime {
+  background-color: #dfe778;
+  border: 1px solid rgba(18, 22, 13, 0.08);
+  box-shadow: 0 16px 36px -10px rgba(180, 200, 30, 0.22);
+}
+
+.cs-card-lime:hover {
+  border-color: rgba(18, 22, 13, 0.22);
+  box-shadow: 0 28px 65px -12px rgba(180, 200, 30, 0.38);
+}
+
+.cs-card-lime .cs-card-headline {
+  color: #12160d;
+}
+
+.cs-card-lime .cs-card-narrative {
+  color: rgba(18, 22, 13, 0.82);
+}
+
+/* --------------------------------------------------------------------------
+   Card 3: Core Values (Atmospheric Photo Background with Overlay)
+   -------------------------------------------------------------------------- */
+.cs-card-photo {
+  position: relative;
+  background-color: #3a2f26;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.32);
+}
+
+.cs-card-photo:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 28px 65px -12px rgba(0, 0, 0, 0.48);
+}
+
+.cs-bg-photo-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/portfolio/card3-house.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.cs-card-photo:hover .cs-bg-photo-layer {
+  transform: scale(1.07);
+}
+
+.cs-bg-photo-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 18, 14, 0.32) 0%,
+    rgba(22, 18, 14, 0.68) 50%,
+    rgba(22, 18, 14, 0.94) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cs-card-photo .cs-card-headline {
+  color: #ffffff;
+}
+
+.cs-card-photo .cs-card-narrative {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   Card Body Layouts (Card 1 & 3 bottom, Card 2 top)
+   -------------------------------------------------------------------------- */
+.cs-card-body {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.cs-card-dark .cs-card-body,
+.cs-card-photo .cs-card-body {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.cs-card-lime .cs-card-body {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.cs-card-headline {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(28px, 2.2vw, 34px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.032em;
+  margin: 0 0 14px 0;
+}
+
+.cs-card-narrative {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(14px, 1.05vw, 15px);
+  font-weight: 400;
+  line-height: 1.62;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px 0;
+  max-width: 320px;
+}
+
+.cs-card-action {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Dedicated In-Card "Case Study" CTA Pill Button
+   -------------------------------------------------------------------------- */
+.cs-card-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.cs-btn-arrow {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+/* Card 1 & Card 3: Frosted Translucent Pill */
+.cs-card-dark .cs-card-cta-btn,
+.cs-card-photo .cs-card-cta-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cs-card-dark .cs-card-cta-btn:hover,
+.cs-card-photo .cs-card-cta-btn:hover,
+.cs-card-dark:hover .cs-card-cta-btn,
+.cs-card-photo:hover .cs-card-cta-btn {
+  background: #ffffff;
+  color: #12160d;
+  border-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cs-card-dark:hover .cs-btn-arrow,
+.cs-card-photo:hover .cs-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Card 2: Deep Dark Contrast Pill */
+.cs-card-lime .cs-card-cta-btn.cs-btn-dark {
+  background: #14180f;
+  color: #dfe778;
+  border: 1px solid #14180f;
+}
+
+.cs-card-lime .cs-card-cta-btn.cs-btn-dark:hover,
+.cs-card-lime:hover .cs-card-cta-btn.cs-btn-dark {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: 0 8px 24px rgba(18, 22, 13, 0.22);
+}
+
+.cs-card-lime:hover .cs-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Card 2: Angled Building Visual at Bottom Left
+   -------------------------------------------------------------------------- */
+.cs-building-visual {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(170px, 16vw, 215px);
+  z-index: 1;
+  pointer-events: none;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cs-building-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: bottom left;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.16));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-card-lime:hover .cs-building-visual img {
+  transform: scale(1.05) translate(2px, -2px);
+}
+
+/* --------------------------------------------------------------------------
+   4. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .case-studies-header {
+    margin-bottom: 44px;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+    gap: 32px;
+  }
+
+  .cs-showcase-card {
+    border-radius: 24px;
+  }
+
+  .cs-showcase-img-wrap {
+    border-radius: 24px;
+  }
+
+  .cs-ref-card {
+    min-height: 480px;
+  }
+
+  .cs-building-visual {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-studies-section {
+    padding: 75px 0 90px;
+  }
+
+  .case-studies-header {
+    margin-bottom: 36px;
+  }
+
+  .case-studies-display-title {
+    font-size: 32px;
+    line-height: 1.18;
+    margin-bottom: 14px;
+  }
+
+  .case-studies-subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .case-studies-grid {
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .cs-showcase-card {
+    border-radius: 20px;
+  }
+
+  .cs-showcase-img-wrap {
+    border-radius: 20px;
+  }
+
+  .cs-ref-card {
+    min-height: 440px;
+    padding: 32px 24px 30px;
+  }
+
+  .cs-card-headline {
+    font-size: 26px;
+  }
+
+  .cs-building-visual {
+    width: 170px;
+  }
+}

@@ -1,0 +1,272 @@
+/* ==========================================================================
+   TrynixTech 'How We Deliver' Section — Studio Matrix Edition
+   Directly matched to user reference: 3x2 Seamless Grid, Soft Lavender Numbers,
+   Tinted Middle Column (#f7f7f7), Subtle Horizontal Divider, and Amber Lightning Tags.
+   ========================================================================== */
+
+.how-we-work-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(60px, 6vw, 90px) 0 clamp(24px, 3vw, 40px);
+  overflow: hidden;
+  scroll-margin-top: 100px;
+}
+
+.how-we-work-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Section Header
+   -------------------------------------------------------------------------- */
+.how-we-work-header {
+  text-align: left;
+  margin: 0 0 clamp(48px, 5.5vw, 68px) 0;
+  max-width: 860px;
+}
+
+.how-we-work-display-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+}
+
+.how-we-work-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+  max-width: 760px;
+}
+
+/* --------------------------------------------------------------------------
+   2. 6-Card Seamless Process Matrix (3 columns x 2 rows)
+   -------------------------------------------------------------------------- */
+.how-we-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #ffffff;
+}
+
+/* Base Card Cell */
+.hww-card {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(40px, 4.2vw, 54px) clamp(28px, 3.2vw, 42px) clamp(34px, 3.8vw, 46px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.25s ease;
+  box-sizing: border-box;
+  min-height: 380px;
+}
+
+/* Row 2 (Cards 4, 5, 6) don't need inner bottom border */
+.hww-card:nth-child(4),
+.hww-card:nth-child(5),
+.hww-card:nth-child(6) {
+  border-bottom: none;
+}
+
+/* Middle Column (Cards 2 & 5) — Soft Tinted Background as in Reference */
+.hww-card:nth-child(2),
+.hww-card:nth-child(5),
+.hww-card.is-tinted {
+  background-color: #f7f7f7;
+}
+
+/* Clean, subtle hover enhancement */
+.hww-card:hover {
+  background-color: #fafafa;
+}
+
+.hww-card:nth-child(2):hover,
+.hww-card:nth-child(5):hover,
+.hww-card.is-tinted:hover {
+  background-color: #f2f2f2;
+}
+
+/* --------------------------------------------------------------------------
+   3. Card Anatomy (Typography & Tags)
+   -------------------------------------------------------------------------- */
+.hww-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Soft Lavender / Purple Phase Number */
+.hww-card-number {
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8b5cf6;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+/* Card Title (Display 2-line title) */
+.hww-card-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(23px, 2.2vw, 27px);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.24;
+  letter-spacing: -0.025em;
+  margin: 0 0 24px 0;
+}
+
+/* Description Text */
+.hww-card-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: #4b5563;
+  margin: 0 0 32px 0;
+  font-weight: 400;
+}
+
+/* Footer Tag Container */
+.hww-card-footer {
+  margin-top: auto;
+}
+
+/* Thin Divider Line Above Tag */
+.hww-card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f1f1f1;
+  margin-bottom: 18px;
+}
+
+/* Bottom Tag (Amber Lightning Bolt + Slate Label) */
+.hww-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  letter-spacing: -0.01em;
+}
+
+.hww-lightning-icon {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.hww-tag-text {
+  display: inline-block;
+  color: #6b7280;
+}
+
+/* --------------------------------------------------------------------------
+   4. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .how-we-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hww-card {
+    border-bottom: 1px solid #f1f1f1 !important;
+    padding: 38px 28px 34px;
+    min-height: 350px;
+  }
+
+  .hww-card:nth-child(5),
+  .hww-card:nth-child(6) {
+    border-bottom: none !important;
+  }
+
+  /* Reset 3-column tinted pattern for 2-column rhythm */
+  .hww-card:nth-child(2),
+  .hww-card:nth-child(5) {
+    background-color: #ffffff;
+  }
+
+  .hww-card:nth-child(2),
+  .hww-card:nth-child(3) {
+    background-color: #f7f7f7;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-we-work-section {
+    padding: 50px 0 24px;
+  }
+
+  .how-we-work-header {
+    margin-bottom: 36px;
+  }
+
+  .how-we-work-display-title {
+    font-size: 30px;
+  }
+
+  .how-we-work-subtitle {
+    font-size: 15px;
+  }
+
+  .how-we-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hww-card {
+    border-bottom: 1px solid #f1f1f1 !important;
+    padding: 32px 20px 28px;
+    min-height: auto;
+  }
+
+  .hww-card:last-child {
+    border-bottom: none !important;
+  }
+
+  .hww-card:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .hww-card:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+
+  .hww-card-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .hww-card-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Fallback for legacy wireframe visuals if present on other pages */
+.hww-card-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.hww-wireframe-svg {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+}
+

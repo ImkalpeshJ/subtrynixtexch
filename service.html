@@ -28,19 +28,13 @@
   <!-- Code Editor  -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/app.min.css">
+  <link rel="stylesheet" href="assets/css/about-hero.css">
+  <link rel="stylesheet" href="assets/css/services-section.css">
+  <link rel="stylesheet" href="assets/css/how-we-work.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
-<body>
-
-  <div class="preloader">
-    <div class="preloader-inner">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <!-- End preloader -->
+<body class="services-page-body">
 
   <div class="progress-bar-container">
     <div class="progress-bar"></div>
@@ -79,48 +73,25 @@
       <div class="wionmobile-menu">
         <ul>
           <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
             <a href="about.html">About</a>
           </li>
-          <li class="menu-item-has-children">
-            <a href="#">Services</a>
-            <ul class="sub-menu">
-              <li class="menu-item-has-children">
-                <a href="#">Service</a>
-                <ul class="sub-menu">
-                  <li><a href='service.html'>Service</a></li>
-                  <li><a href='service-details.html'>Service Details</a></li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <a href="#">Portfolio</a>
-                <ul class="sub-menu">
-                  <li><a href='portfolio.html'>Portfolio</a></li>
-                </ul>
-              </li>
-              <li><a href='faq.html'>Faq</a></li>
-            </ul>
+          <li>
+            <a href="service.html">Services</a>
           </li>
-          <li class="menu-item-has-children">
-            <a href="#">Blog</a>
-            <ul class="sub-menu">
-              <li><a href='blog.html'>Blog</a></li>
-              <li><a href='blog-detail.html'>Blog Details</a></li>
-            </ul>
+          <li>
+            <a href="blog.html">Blogs</a>
           </li>
-          <li class="menu-item-has-children">
-            <a href="#">Contact</a>
-            <ul class="sub-menu">
-              <li><a href='contact-us.html'>Contact</a></li>
-            </ul>
+          <li>
+            <a href="career.html">Careers</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact Us</a>
           </li>
         </ul>
       </div>
       
       <div class="wionmobile-menu-btn">
-        <a class='wiondefault-btn wionheader-btn btn2' href="contact-us.html">Contact us
+        <a class='wiondefault-btn wionheader-btn btn2' href="contact-us.html">Start a Project
           <span class="wionbutton-icon">
             <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
             <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
@@ -146,42 +117,19 @@
             <nav class="main-menu menu-style1 d-none d-lg-block menu-left">
               <ul>
                 <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
                   <a href="about.html">About</a>
                 </li>
-                <li class="menu-item-has-children">
-                  <a href="#">Pages</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item-has-children">
-                      <a class="no-border" href="#">Service</a>
-                      <ul class="sub-menu">
-                        <li><a href='service.html'>Service</a></li>
-                        <li><a href='service-details.html'>Service Details</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a class="no-border" href="#">Portfolio</a>
-                      <ul class="sub-menu">
-                        <li><a href='portfolio.html'>Portfolio</a></li>
-                      </ul>
-                    </li>
-                    <li><a href='faq.html'>Faq</a></li>
-                  </ul>
+                <li>
+                  <a href="service.html">Services</a>
                 </li>
-                <li class="menu-item-has-children">
-                  <a class="no-border" href="#">Blog</a>
-                  <ul class="sub-menu">
-                    <li><a href='blog.html'>Blog</a></li>
-                    <li><a href='blog-detail.html'>Blog Details</a></li>
-                  </ul>
+                <li>
+                  <a href="blog.html">Blogs</a>
                 </li>
-                <li class="menu-item-has-children">
-                  <a class="no-border" href="#">Contact</a>
-                  <ul class="sub-menu">
-                    <li><a href='contact-us.html'>Contact</a></li>
-                  </ul>
+                <li>
+                  <a href="career.html">Careers</a>
+                </li>
+                <li>
+                  <a href="contact-us.html">Contact Us</a>
                 </li>
               </ul>
             </nav>
@@ -189,7 +137,7 @@
         
         </div>
         <div class="col-auto d-flex align-items-center">
-          <a class='wiondefault-btn wionheader-btn' href="contact-us.html">Contact us
+          <a class='wiondefault-btn wionheader-btn' href="contact-us.html">Start a Project
             <span class="wionbutton-icon">
                 <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
                 <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
@@ -212,404 +160,569 @@
   </header>
   <!-- End mobile menu -->
 
-  <section class="wionabout-section1 wiondefault-bg">
-    <div class="container">
-      <div class="wionsection-title">
-        <div class="wionsub-title aos-init" data-aos-delay="400" data-aos="fade-up">
-          <p>What we do for you</p>
-        </div>
-        <h2 class="aos-init" data-aos-delay="500" data-aos="fade-up">Our services</h2>
-      </div>
-      <div class="wionservice-main-box card-sticky">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="wionservice-d-thumb">
-              <img src="assets/images/service/thumb6.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="wiondefault-content pl-110">
-              <h3 class="title">01. Web Application Development</h3>
-              <p>High-performance backend solutions with custom APIs, enterprise authentication, real-time capabilities microservices design, and complex logic tailored precisely to business requirements.</p>
-              <div class="mt-50">
-                <div class="wionservice-d-data">
-                  <ul>
-                    <li>
-                      <h4>Custom Web App Development</h4>
-                    </li>
-                    <li>
-                      <h4>Enterprise Web Development</h4>
-                    </li>
-                    <li>
-                      <h4>Backend Development Services</h4>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mt-50">
-                <a class='wiondefault-btn' href="service-details.html">Explore more
-                  <span class="wionbutton-icon">
-                                    <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                                    <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                                </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wionservice-main-box card-sticky mt-80">
-        <div class="row">
-          <div class="col-lg-6 order-lg-2">
-            <div class="wionservice-d-thumb">
-              <img src="assets/images/service/thumb7.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="wiondefault-content pr-110">
-              <h3 class="title">2. UI/UX Design</h3>
-              <p>Responsive, accessible interfaces built with modern frameworks, pixel-perfect design-to-code execution, cross-browser compatibility, and smooth user experiences optimized for performance and usability.</p>
-              <div class="mt-50">
-                <div class="wionservice-d-data">
-                  <ul>
-                    <li>
-                      <h4>UI/UX Development</h4>
-                    </li>
-                    <li>
-                      <h4>Responsive Web Design</h4>
-                    </li>
-                    <li>
-                      <h4>Web UI Development</h4>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mt-50">
-                <a class='wiondefault-btn' href="service-details.html">Explore more
-                  <span class="wionbutton-icon">
-                                    <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                                    <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                                </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wionservice-main-box card-sticky mt-80">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="wionservice-d-thumb">
-              <img src="assets/images/service/thumb8.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="wiondefault-content pl-110">
-              <h3 class="title">3. Full Stack Development</h3>
-              <p>End-to-end solutions combining frontend, backend, databases, and cloud infrastructure with rapid MVP development, efficient APIs, and streamlined DevOps deployment workflows.</p>
-              <div class="mt-50">
-                <div class="wionservice-d-data">
-                  <ul>
-                    <li>
-                      <h4>MVP Development Services</h4>
-                    </li>
-                    <li>
-                      <h4>End-to-End Web Development</h4>
-                    </li>
-                    <li>
-                      <h4>Startup Full Stack Development</h4>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mt-50">
-                <a class='wiondefault-btn' href="service-details.html">Explore more
-                  <span class="wionbutton-icon">
-                                    <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                                    <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                                </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wionservice-main-box card-sticky mt-80">
-        <div class="row">
-          <div class="col-lg-6 order-lg-2">
-            <div class="wionservice-d-thumb">
-              <img src="assets/images/service/thumb9.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="wiondefault-content pr-110">
-              <h3 class="title">4. Website Migration</h3>
-              <p>Upgrade legacy websites to modern, responsive platforms with seamless migration, improved performance, and SEO preservation.</p>
-              <div class="mt-50">
-                <div class="wionservice-d-data">
-                  <ul>
-                    <li>
-                      <h4>SEO-Friendly Website Migration</h4>
-                    </li>
-                    <li>
-                      <h4>Website Conversion Services</h4>
-                    </li>
-                    <li>
-                      <h4>UX Optimization Services</h4>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mt-50">
-                <a class='wiondefault-btn' href="service-details.html">Explore more
-                  <span class="wionbutton-icon">
-                                    <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                                    <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                                </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wionservice-main-box card-sticky mt-80">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="wionservice-d-thumb">
-              <img src="assets/images/service/thumb10.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="wiondefault-content pl-110">
-              <h3 class="title">5. API Integration Services</h3>
-              <p>Seamlessly connect payment gateways, social logins, and third-party APIs with secure, scalable, and reliable integrations. </p>
-              <div class="mt-50">
-                <div class="wionservice-d-data">
-                  <ul>
-                    <li>
-                      <h4>API Integration Services</h4>
-                    </li>
-                    <li>
-                      <h4>Custom API Development</h4>
-                    </li>
-                    <li>
-                      <h4>Web API Development</h4>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mt-50">
-                <a class='wiondefault-btn' href="service-details.html">Explore more
-                  <span class="wionbutton-icon">
-                                    <img class="arry1" src="assets/images/svg/arrow-right.png" alt="">
-                                    <img class="arry2" src="assets/images/svg/arrow-right.png" alt="">
-                                </span>
-                </a>
-              </div>
-            </div>
-          </div>
+
+  <!-- ==========================================================================
+       TrynixTech — Services Hero Section (Dark Gradient & End-to-End Image)
+       ========================================================================== -->
+  <section class="trynix-about-hero-section trynix-page-hero-section services-hero-dark" id="services-hero">
+    <div class="hero-container-fluid">
+      <div class="about-hero-layout page-hero-layout">
+        <!-- Content Column (Left) -->
+        <div class="about-hero-content page-hero-content">
+          <!-- Main Display Headline (H1) -->
+          <h1 class="about-hero-headline page-hero-headline" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+            Digital products built<br>to scale your business.
+          </h1>
+
+          <!-- Section Sub-headline (H2) -->
+          <h2 class="about-hero-subheadline page-hero-subheadline" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+            From intuitive UI/UX design and high-performance web applications to scalable cloud architectures and AI solutions, TrynixTech delivers end-to-end digital engineering for modern businesses.
+          </h2>
         </div>
       </div>
     </div>
   </section>
-  <!-- end hero -->
+  <!-- End Services Hero Section -->
 
 
-  <div class="white-speech"></div>
-  <footer class="wionfooter-section">
-    <div class="wiondefault-bg wioncta-section bg-heading overflow-hidden">
-      <div class="fixed-height">
-        <div class="wioncta-slider-init">
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
+  <!-- ==========================================================================
+       TrynixTech 'Our Services' Section (Modern Interactive Accordion)
+       ========================================================================== -->
+  <section class="trynix-services-section" id="services">
+    <div class="trynix-services-container">
+
+      <!-- Services Narrative Statement (Client Stories Font Style) -->
+      <div class="services-narrative-statement">
+        <p class="services-narrative-text">
+          Great digital experiences don't happen by accident. They are built through thoughtful design, innovative technology, and a deep understanding of business goals. At TrynixTech, we combine UI/UX design, web development, software engineering, and AI-powered solutions to transform complex ideas into impactful digital products. From intuitive interfaces to scalable applications, we build solutions that solve problems and drive business growth.
+        </p>
+      </div>
+
+      <!-- Services List (7 Core Services, All Open) -->
+      <div class="services-accordion-list">
+
+        <!-- 01. Software Development -->
+        <div class="service-accordion-item is-open" data-service="1">
+          <div class="service-accordion-header" id="service-header-1">
+            <h3 class="service-title">Software Development</h3>
           </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+          <div class="service-accordion-body" id="service-panel-1">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Custom Web Applications</li>
+                  <li>Mobile Apps (iOS & Android)</li>
+                  <li>Full-Stack Architecture</li>
+                  <li>API & Microservices</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>SaaS Platforms</li>
+                  <li>Enterprise Systems</li>
+                  <li>System Integration</li>
+                  <li>Legacy Modernization</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  From early ideas to complex enterprise architectures, we engineer high-performance, scalable web and mobile software solutions engineered to scale seamlessly as your business grows.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="fixed-height">
-        <div class="wioncta-slider-init2" dir="rtl">
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
+
+        <!-- 02. Cloud & Infrastructure -->
+        <div class="service-accordion-item is-open" data-service="2">
+          <div class="service-accordion-header" id="service-header-2">
+            <h3 class="service-title">Cloud & Infrastructure</h3>
           </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
-            </div>
-          </div>
-          <div class="wioncta-slider-content">
-            <h2>Let's collaborate to something amazing</h2>
-            <div class="wioncta-victor-icon">
-              <img src="assets/images/cta/icon1.svg" alt="Icon">
+          <div class="service-accordion-body" id="service-panel-2">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>AWS, Azure & GCP Cloud</li>
+                  <li>DevOps & CI/CD Pipelines</li>
+                  <li>Kubernetes & Docker</li>
+                  <li>Infrastructure as Code (IaC)</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Cloud Migration & Audits</li>
+                  <li>High-Availability Setup</li>
+                  <li>Serverless Computing</li>
+                  <li>Cost Optimization & FinOps</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  Modernize your deployment pipeline and infrastructure with bulletproof cloud environments built for 99.99% uptime, automatic scalability, and rigorous performance optimization.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- 03. AI, Data & Automation -->
+        <div class="service-accordion-item is-open" data-service="3">
+          <div class="service-accordion-header" id="service-header-3">
+            <h3 class="service-title">AI, Data & Automation</h3>
+          </div>
+          <div class="service-accordion-body" id="service-panel-3">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Generative AI & LLM Apps</li>
+                  <li>AI Agents & Automation</li>
+                  <li>Machine Learning Models</li>
+                  <li>Natural Language Processing</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Data Pipelines & ETL</li>
+                  <li>Predictive Analytics</li>
+                  <li>BI & Real-time Dashboards</li>
+                  <li>Workflow Automation</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  Leverage state-of-the-art AI models, intelligent agentic workflows, and robust data pipelines to automate operations, unlock business intelligence, and create next-generation user experiences.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04. Design & Digital Experience -->
+        <div class="service-accordion-item is-open" data-service="4">
+          <div class="service-accordion-header" id="service-header-4">
+            <h3 class="service-title">Design & Digital Experience</h3>
+          </div>
+          <div class="service-accordion-body" id="service-panel-4">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>UX/UI Product Design</li>
+                  <li>Interactive Prototypes</li>
+                  <li>Design Systems & Tokens</li>
+                  <li>Mobile App Interface Design</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Web & Landing Page Design</li>
+                  <li>Brand Identity & Guidelines</li>
+                  <li>User Research & Testing</li>
+                  <li>Motion & Micro-interactions</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  We craft intuitive, human-centric digital interfaces that turn visitors into loyal users. Every flow, interaction, and design token is optimized for usability, aesthetic delight, and conversion.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05. Security & Compliance -->
+        <div class="service-accordion-item is-open" data-service="5">
+          <div class="service-accordion-header" id="service-header-5">
+            <h3 class="service-title">Security & Compliance</h3>
+          </div>
+          <div class="service-accordion-body" id="service-panel-5">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Cybersecurity Audits</li>
+                  <li>Penetration Testing</li>
+                  <li>Vulnerability Assessment</li>
+                  <li>Zero Trust Architecture</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>SOC 2 & ISO 27001 Readiness</li>
+                  <li>GDPR & HIPAA Compliance</li>
+                  <li>Identity & Access (IAM)</li>
+                  <li>Data Encryption & Backup</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  Protect your company's critical assets and customer data with comprehensive security assessments, rigorous defense strategies, and continuous compliance standards.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06. IT Support & Managed Services -->
+        <div class="service-accordion-item is-open" data-service="6">
+          <div class="service-accordion-header" id="service-header-6">
+            <h3 class="service-title">IT Support & Managed Services</h3>
+          </div>
+          <div class="service-accordion-body" id="service-panel-6">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>24/7 Infrastructure Monitoring</li>
+                  <li>Helpdesk & Technical Support</li>
+                  <li>Incident Response & SLA</li>
+                  <li>System Maintenance & Patching</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Disaster Recovery Planning</li>
+                  <li>Network & Endpoint Management</li>
+                  <li>Performance Diagnostics</li>
+                  <li>Vendor & License Management</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  Round-the-clock proactive monitoring, rapid technical troubleshooting, and dependable managed services that keep your systems online, secure, and running at peak performance.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07. Digital Marketing & Growth -->
+        <div class="service-accordion-item is-open" data-service="7">
+          <div class="service-accordion-header" id="service-header-7">
+            <h3 class="service-title">Digital Marketing & Growth</h3>
+          </div>
+          <div class="service-accordion-body" id="service-panel-7">
+            <div class="service-accordion-content">
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Technical SEO & Audits</li>
+                  <li>Conversion Rate Optimization (CRO)</li>
+                  <li>Performance Marketing & Ads</li>
+                  <li>Go-to-Market Strategy</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <ul class="service-sublist">
+                  <li>Content & Email Marketing</li>
+                  <li>Analytics & Attribution Tracking</li>
+                  <li>Funnel & Landing Page Testing</li>
+                  <li>Product-Led Growth (PLG)</li>
+                </ul>
+              </div>
+              <div class="service-col service-desc-wrap">
+                <p class="service-desc-text">
+                  Accelerate customer acquisition and drive scalable revenue with data-driven growth strategies, high-converting funnel optimization, and full-spectrum digital marketing campaigns.
+                </p>
+                <a href="contact-us.html" class="service-action-link">Start a project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="wioncta-btn mt-80">
-        <a class='wiondefault-btn white-outline aos-init' data-aos-delay='500' data-aos='fade-up' href="contact-us.html">Schedule a call
-          <span class="wionbutton-icon">
-                  <img class="arry1" src="assets/images/svg/arrow-white.svg" alt="">
-                  <img class="arry2" src="assets/images/svg/arrow-white.svg" alt="">
-              </span>
+    </div>
+  </section>
+  <!-- End Services Section -->
+
+  <!-- ==========================================================================
+       TrynixTech 'How We Deliver' Process Section
+       ========================================================================== -->
+  <section class="how-we-work-section" id="how-we-work">
+    <div class="how-we-work-container">
+
+      <!-- Section Header -->
+      <div class="how-we-work-header" data-aos="fade-up">
+        <h2 class="how-we-work-display-title">How We Deliver</h2>
+        <p class="how-we-work-subtitle">
+          A proven process designed to transform complex workflows into scalable AI-powered systems — efficiently, transparently, and with precision craft.
+        </p>
+      </div>
+
+      <!-- 6-Card Process Grid (Studio Matrix Edition - Matched to Reference) -->
+      <div class="how-we-work-grid">
+
+        <!-- 01. Discovery and Strategic Audit -->
+        <div class="hww-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="hww-card-body">
+            <span class="hww-card-number">01</span>
+            <h3 class="hww-card-title">Discovery<br>and Strategic Audit</h3>
+            <p class="hww-card-desc">
+              Before we build, we analyze user workflows, market opportunities, legacy architecture, and business goals. Then we identify what to optimize, where AI creates real leverage, and how to execute with velocity.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Discovery Foundation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02. System Architecture and Strategy (Tinted Column) -->
+        <div class="hww-card is-tinted" data-aos="fade-up" data-aos-delay="200">
+          <div class="hww-card-body">
+            <span class="hww-card-number">02</span>
+            <h3 class="hww-card-title">System Architecture<br>and Strategy</h3>
+            <p class="hww-card-desc">
+              Your product's technical north star defining data flows, cloud infrastructure, AI models, and scalable API design. This engineering foundation guides every development sprint that follows.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Architectural Clarity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03. UI/UX Design and Prototyping -->
+        <div class="hww-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="hww-card-body">
+            <span class="hww-card-number">03</span>
+            <h3 class="hww-card-title">UI/UX Design<br>and Prototyping</h3>
+            <p class="hww-card-desc">
+              Interfaces are promises. We craft intuitive user journeys, interactive Figma prototypes, and robust design systems that turn complex technical capabilities into clear, elegant user experiences.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Precision Craft</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04. Agile Engineering and AI Build -->
+        <div class="hww-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="hww-card-body">
+            <span class="hww-card-number">04</span>
+            <h3 class="hww-card-title">Agile Engineering<br>and AI Build</h3>
+            <p class="hww-card-desc">
+              Clean code, modular services, and intelligent automation built in focused 1–2 week sprints. Continuous integration and testing ensure you see tangible, working software early and often.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Production Velocity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05. Testing, Security and Calm Launch (Tinted Column) -->
+        <div class="hww-card is-tinted" data-aos="fade-up" data-aos-delay="200">
+          <div class="hww-card-body">
+            <span class="hww-card-number">05</span>
+            <h3 class="hww-card-title">Testing, Security<br>and Calm Launch</h3>
+            <p class="hww-card-desc">
+              Comprehensive test automation, SOC 2 compliance readiness, load testing, and rehearsed zero-downtime deployment. When launch day arrives, operations remain smooth, stable, and calm.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Zero-Downtime Launch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06. Continuous Support and Scalability -->
+        <div class="hww-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="hww-card-body">
+            <span class="hww-card-number">06</span>
+            <h3 class="hww-card-title">Continuous Support<br>and Scalability</h3>
+            <p class="hww-card-desc">
+              We stay partnered with you after launch with 24/7 proactive monitoring, performance diagnostics, and iterative feature scaling as your user base and data volumes grow.
+            </p>
+          </div>
+          <div class="hww-card-footer">
+            <div class="hww-card-divider"></div>
+            <div class="hww-card-tag">
+              <svg class="hww-lightning-icon" width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span class="hww-tag-text">Engineered for Scale</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End How We Deliver Section -->
+
+  <!-- ==========================================================================
+       TrynixTech — Services CTA Section (End-to-End Digital Solutions)
+       ========================================================================== -->
+  <section class="services-cta-section" id="services-cta">
+    <div class="services-cta-container">
+      <h2 class="services-cta-headline" data-aos="fade-up">
+        End-to-end Digital Solutions<br>
+        to Transform Your Ideas into<br>
+        Real Business Growth
+      </h2>
+      <div class="services-cta-action" data-aos="fade-up" data-aos-delay="100">
+        <a href="contact-us.html" class="services-cta-btn">
+          <span>Let's Connect</span>
+          <svg class="cta-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </a>
       </div>
     </div>
-    <div class="footer-sticky">
-      <div class="container">
-        <div class="wionfooter-top">
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="wionfooter-textarea">
-                <div class="wionsub-title">
-                  <p>Get in touch</p>
-                </div>
-                <a href="mailto:name@gmail.com">
-                  <h2>contact@<br>trynixtech.in</h2>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-5 offset-xl-1">
-              <div class="wionfooter-menu-wraper pl-30">
-                <div class="wionfooter-menu">
-                  <h4>Navigation</h4>
-                  <ul>
-                    <li>
-                      <a href='/'>Home</a>
-                    </li>
-                    <li>
-                      <a href="portfolio.html">Work</a>
-                    </li>
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li>
-                      <a href="blog.html">Articles</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="wionfooter-menu">
-                  <h4>Other</h4>
-                  <ul>
-                    <li>
-                      <a href="faq.html">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="pricing.html">Pricing</a>
-                    </li>
-                    <li>
-                      <a href="team.html">Team</a>
-                    </li>
-                    <li>
-                      <a href="contact-us.html">Contact</a>
-                    </li>
-                    <li>
-                      <a href="error-404.html"></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="wionfooter-menu">
-                  <h4>Follow us</h4>
-                  <ul>
-                    <li>
-                      <a href="https://www.instagram.com/trynixtech?igsh=ZjdlMjJwc2R2bHR0/">Instagram</a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/in/trynix-tech-b47921391/">LinkedIn</a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.facebook.com/"></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  </section>
+  <!-- End Services CTA Section -->
 
+
+  <!-- ==========================================================================
+       TrynixTech — Studio Dark Architectural Footer (Home Page Footer)
+       ========================================================================== -->
+  <footer class="trynix-footer-section">
+    <div class="trynix-footer-container">
+      <!-- Top Row: Brand & Contact + What We Do Services -->
+      <div class="trynix-footer-top">
+        <!-- Left: Brand Logo, Tagline, Email, Pune Location & Social Media Icons -->
+        <div class="trynix-footer-left">
+          <!-- TrynixTech Logo (Matching Header Logo) -->
+          <a href="/" class="trynix-footer-brand-logo" aria-label="TrynixTech Home">
+            <img src="assets/images/logo/logo-white.svg" alt="TRYNIXTECH" class="trynix-footer-logo-img" width="143" height="24">
+          </a>
+
+          <!-- Studio Mission Tagline -->
+          <p class="trynix-footer-tagline">
+            AI, technology, creativity, engineering, and UI/UX come together to build intelligent digital experiences—where innovation meets what’s next.
+          </p>
+
+          <!-- Contact Details (Mail + Pune Location with SVGs) -->
+          <div class="trynix-footer-contact-list">
+            <!-- Mail Address -->
+            <div class="trynix-contact-item">
+              <span class="trynix-contact-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <a href="mailto:contact@trynixtech.in" class="trynix-contact-link">contact@trynixtech.in</a>
+            </div>
+
+            <!-- Pune Location -->
+            <div class="trynix-contact-item">
+              <span class="trynix-contact-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="trynix-contact-text">Pune · India</span>
             </div>
           </div>
-        </div>
-        <div class="wionfooter-bottom-wrap">
-          <div class="wionfooter-logo">
-            <a href='/'>
-              <img src="assets/images/logo/logo-dark.svg" alt="Foote Logo">
+
+          <!-- Social Media Icons (Circular buttons: LinkedIn, Instagram, X) -->
+          <div class="trynix-footer-socials">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/trynix-tech-b47921391" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.78a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/trynixtech?igsh=ZjdlMjJwc2R2bHR0" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="trynix-social-icon-btn" aria-label="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
             </a>
           </div>
-          <div class="wionfooter-bottom-text">
-            <p>© Copyright 2026, All Rights Reserved by Trynix Tech</p>
+        </div>
+
+        <!-- Right: 2-Column Links Grid (WHAT WE DO + COMPANY) -->
+        <div class="trynix-footer-nav-grid">
+          <!-- Column 1: WHAT WE DO -->
+          <div class="trynix-footer-nav-col">
+            <h4>WHAT WE DO</h4>
+            <ul>
+              <li><a href="service.html">Custom Software Development</a></li>
+              <li><a href="service.html">Web &amp; Mobile Applications</a></li>
+              <li><a href="service.html">Cloud Architecture &amp; DevOps</a></li>
+              <li><a href="service.html">AI &amp; Machine Learning</a></li>
+              <li><a href="service.html">Product Design &amp; UX</a></li>
+              <li><a href="service.html">Digital Marketing</a></li>
+              <li><a href="service.html">Content &amp; Creative</a></li>
+              <li class="all-services-link"><a href="service.html">All services <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: COMPANY -->
+          <div class="trynix-footer-nav-col">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="portfolio.html">Our Work</a></li>
+              <li><a href="career.html">Careers</a></li>
+              <li><a href="blog.html">Blog &amp; Insights</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
           </div>
         </div>
+      </div>
+
+      <!-- Middle Divider Line & Overlapping "Get Started" Pill Button -->
+      <div class="trynix-footer-divider-wrap">
+        <div class="trynix-footer-divider-line" aria-hidden="true"></div>
+        <a href="contact-us.html" class="trynix-footer-get-started-btn">Get Started</a>
+      </div>
+
+      <!-- Sub-Bar: Brand Mission Description & Legal Links -->
+      <div class="trynix-footer-sub-bar">
+        <p class="trynix-footer-mission">
+          From branding to digital engineering. Our expert team is here to elevate your brand and connect you with your audience
+        </p>
+        <div class="trynix-footer-legal-links">
+          <a href="#">TERMS &amp; CONDITIONS</a>
+          <a href="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+
+      <!-- Giant Architectural Text ("Trynixtech") Cropped at Bottom -->
+      <div class="trynix-footer-giant-display" aria-hidden="true">
+        <span class="trynix-footer-giant-title">Trynixtech.</span>
       </div>
     </div>
   </footer>
@@ -646,6 +759,7 @@
   <!-- <script src="assets/js/scroll-portfolio-animi.js"></script> -->
   <!-- <script src="assets/js/gsap-scroll-animi.js"></script> -->
 
+  <script src="assets/js/services-accordion.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

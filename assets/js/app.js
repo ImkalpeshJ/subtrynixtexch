@@ -51,16 +51,9 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   WION STICKY MENU JS INIT
   --------------------------------------------------------------*/
 
-  var lastScroll = 0;
   function sticky_header() {
-    var header_hegith = $("header").innerHeight();
-    var scroll = $(window).scrollTop();
-    if (scroll > header_hegith && scroll > lastScroll) {
-      $("header").addClass("hide-header");
-    } else if (scroll < lastScroll) {
-      $("header").removeClass("hide-header");
-    }
-    lastScroll = scroll;
+    // Keep top navigation floating on top while scrolling (do not hide on scroll down)
+    $("header").removeClass("hide-header");
   }
   $(function () {
     sticky_header();

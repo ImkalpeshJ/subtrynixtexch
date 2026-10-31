@@ -1,0 +1,214 @@
+/* ==========================================================================
+   TrynixTech — Careers Banner Section
+   Aesthetic fluid silk banner with glowing neon accent & interactive CTA
+   ========================================================================== */
+
+.trynix-career-banner-section {
+  position: relative;
+  background-color: #ededf0;
+  padding: 10px 0 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.career-banner-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Banner Card Outer Container (Fluid Silk Background & Ambient Glow)
+   -------------------------------------------------------------------------- */
+.career-banner {
+  position: relative;
+  border-radius: 28px;
+  background-color: #080c17;
+  background-image: 
+    linear-gradient(90deg, rgba(8, 12, 23, 0.94) 0%, rgba(10, 16, 31, 0.84) 50%, rgba(17, 30, 68, 0.4) 100%),
+    url('../images/service/services-banner-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 56px 64px;
+  box-shadow: 0 24px 60px -15px rgba(10, 16, 31, 0.22);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Right Edge Neon Glow Fallback */
+.career-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 50%, rgba(37, 99, 235, 0.28) 0%, rgba(59, 130, 246, 0.1) 45%, transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   2. Left Column: Pill Badge & Headline
+   -------------------------------------------------------------------------- */
+.career-banner-left {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.career-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.career-banner-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+.career-banner-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(32px, 3.8vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Right Column: CTA Button
+   -------------------------------------------------------------------------- */
+.career-banner-right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+/* High-Impact Modern Glass/White Pill CTA Button */
+.career-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 26px;
+  background: #ffffff;
+  color: #080c17 !important;
+  border-radius: 999px;
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.career-banner-btn:hover {
+  background: #38bdf8;
+  color: #080c17 !important;
+  border-color: #38bdf8;
+  box-shadow: 0 14px 30px -4px rgba(56, 189, 248, 0.4), 0 0 25px rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
+
+.career-banner-btn .career-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(8, 12, 23, 0.08);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.career-banner-btn:hover .career-btn-icon {
+  background: rgba(8, 12, 23, 0.15);
+  transform: translateX(4px);
+}
+
+.career-banner-btn .career-btn-icon svg {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   4. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .career-banner {
+    padding: 44px 40px;
+    gap: 30px;
+  }
+  
+  .career-banner-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 860px) {
+  .trynix-career-banner-section {
+    padding: 20px 0 80px;
+  }
+
+  .career-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 30px;
+    gap: 24px;
+  }
+
+  .career-banner-right {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .trynix-career-banner-section {
+    padding: 10px 0 60px;
+  }
+
+  .career-banner {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .career-banner-title {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .career-banner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,391 @@
+/* ==========================================================================
+   TrynixTech — Studio Footer
+   Minimalist Dark Architectural Design Following the Reference System
+   (Typography: Satoshi, Colors: #0c0c0e matte black, crisp white, muted grey, electric purple accent)
+   ========================================================================== */
+
+.trynix-footer-section {
+  position: relative;
+  background-color: #0c0c0e;
+  color: #ffffff;
+  padding: 100px 0 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trynix-footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   1. Top Area: Brand, Contact, Socials & What We Do Navigation
+   -------------------------------------------------------------------------- */
+.trynix-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+/* Left Column: Logo, Tagline, Email, Location & Socials */
+.trynix-footer-left {
+  max-width: 480px;
+}
+
+/* Brand Logo (Matching Header Logo) */
+.trynix-footer-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 22px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.trynix-footer-brand-logo img,
+.trynix-footer-logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.trynix-footer-brand-logo:hover {
+  opacity: 0.85;
+}
+
+/* Tagline Paragraph */
+.trynix-footer-tagline {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: #94a3b8;
+  margin: 0 0 28px 0;
+  max-width: 440px;
+}
+
+/* Contact Info Items (Email & Pune Location with SVGs) */
+.trynix-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.trynix-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.trynix-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.trynix-contact-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.trynix-contact-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.trynix-contact-text {
+  color: #cbd5e1;
+}
+
+/* Social Media Icons (Circular buttons matching reference: LinkedIn, Instagram, X) */
+.trynix-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.trynix-social-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trynix-social-icon-btn:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.trynix-social-icon-btn svg {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.trynix-social-icon-btn:hover svg {
+  transform: scale(1.08);
+}
+
+/* Right Side: Navigation Columns (What We Do + Quick Links) */
+.trynix-footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 60px;
+}
+
+.trynix-footer-nav-col h4 {
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin: 0 0 24px 0;
+}
+
+.trynix-footer-nav-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trynix-footer-nav-col ul li a {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.22s ease, transform 0.22s ease;
+  display: inline-block;
+}
+
+.trynix-footer-nav-col ul li a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.trynix-footer-nav-col ul li.all-services-link a {
+  color: #cbd5e1;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.trynix-footer-nav-col ul li.all-services-link a:hover {
+  color: #a855f7;
+}
+
+/* --------------------------------------------------------------------------
+   2. Middle Horizontal Divider & "Get Started" Pill Button
+   -------------------------------------------------------------------------- */
+.trynix-footer-divider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.trynix-footer-divider-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.trynix-footer-get-started-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  color: #0c0c0e;
+  font-family: 'SatoshiMedium', 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trynix-footer-get-started-btn:hover {
+  background: #f1f5f9;
+  color: #000000;
+  transform: translateY(calc(-50% - 2px));
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.22);
+}
+
+/* --------------------------------------------------------------------------
+   3. Sub-Bar: Brand Mission Description & Legal Links
+   -------------------------------------------------------------------------- */
+.trynix-footer-sub-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 20px;
+}
+
+.trynix-footer-mission {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.52);
+  max-width: 440px;
+  margin: 0;
+}
+
+.trynix-footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.trynix-footer-legal-links a {
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.trynix-footer-legal-links a:hover {
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   4. Bottom Giant Display Typography ("Trynixtech")
+   -------------------------------------------------------------------------- */
+.trynix-footer-giant-display {
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  margin-top: 32px;
+  margin-bottom: -0.15em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.trynix-footer-giant-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(80px, 15.6vw, 240px);
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  color: #262629;
+  white-space: nowrap;
+  display: block;
+  transform: translateY(6%);
+  transition: color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   5. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .trynix-footer-section {
+    padding: 80px 0 0;
+  }
+
+  .trynix-footer-top {
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .trynix-footer-left {
+    max-width: 100%;
+  }
+
+  .trynix-footer-nav-grid {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .trynix-footer-sub-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .trynix-footer-legal-links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trynix-footer-section {
+    padding: 60px 0 0;
+  }
+
+  .trynix-footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .trynix-footer-divider-wrap {
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+
+  .trynix-footer-get-started-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .trynix-footer-sub-bar {
+    gap: 16px;
+  }
+
+  .trynix-footer-mission {
+    font-size: 13.5px;
+  }
+
+  .trynix-footer-legal-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .trynix-footer-giant-display {
+    margin-top: 24px;
+    margin-bottom: -0.1em;
+  }
+
+  .trynix-footer-giant-title {
+    font-size: clamp(52px, 17vw, 90px);
+    line-height: 0.9;
+  }
+}

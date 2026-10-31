@@ -1,0 +1,1247 @@
+/* ==========================================================================
+   TrynixTech — Page Hero Section (Global Standard Replica)
+   Used across About, Services, Blogs, and Careers
+   ========================================================================== */
+
+.trynix-about-hero-section,
+.trynix-page-hero-section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff !important;
+  background-image: 
+    radial-gradient(ellipse 72% 90% at 88% 50%, rgba(148, 163, 184, 0.52) 0%, rgba(203, 213, 225, 0.62) 28%, rgba(226, 232, 240, 0.42) 52%, rgba(255, 255, 255, 0) 80%),
+    radial-gradient(circle at 95% 85%, rgba(100, 116, 139, 0.35) 0%, rgba(203, 213, 225, 0.4) 35%, rgba(255, 255, 255, 0) 68%),
+    linear-gradient(112deg, #ffffff 30%, #f8fafc 50%, #e2e8f0 70%, #cbd5e1 88%, #d5e0ec 100%) !important;
+  padding: clamp(170px, 15vw, 215px) 0 clamp(75px, 7vw, 110px);
+  overflow: hidden;
+  isolation: isolate;
+  border: none !important;
+}
+
+/* Ambient rich lighting sheen across right edge */
+.trynix-about-hero-section::before,
+.trynix-page-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 62vw;
+  height: 140%;
+  background: radial-gradient(ellipse at 65% 50%, rgba(148, 163, 184, 0.48) 0%, rgba(203, 213, 225, 0.38) 42%, rgba(255, 255, 255, 0) 75%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(16px);
+}
+
+.trynix-about-hero-section::after,
+.trynix-page-hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: 5%;
+  width: 45vw;
+  height: 100%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.3) 0%, rgba(226, 232, 240, 0.18) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(30px);
+}
+
+/* Ensure clean pure white page canvas and full-bleed viewport */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+}
+
+.about-who-section,
+.about-mission-section,
+.wionabout-content2,
+.wiondefault-bg {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-radius: 0 !important;
+}
+
+/* Full bleed end-to-end container */
+.hero-container-fluid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 84px);
+}
+
+/* Two-column Hero Layout: Content on Left, Badge on Top Right */
+.about-hero-layout,
+.page-hero-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(24px, 4vw, 60px);
+  position: relative;
+}
+
+.about-hero-content,
+.page-hero-content {
+  flex: 1;
+  max-width: 980px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Eyebrow: PRODUCT DESIGN
+   -------------------------------------------------------------------------- */
+.about-hero-eyebrow,
+.page-hero-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #71717a;
+  line-height: 1;
+  margin-bottom: 26px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Display Headline (H1): Design products people understand...
+   -------------------------------------------------------------------------- */
+.about-hero-headline,
+.page-hero-headline {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(38px, 4.6vw, 64px);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: -0.038em;
+  color: #09090b;
+  margin: 0 0 20px 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sub-Headline (H2): TrynixTech narrative copy
+   -------------------------------------------------------------------------- */
+.about-hero-subheadline,
+.page-hero-subheadline {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18.5px);
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: -0.01em;
+  color: #52525b;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Narrative Description Paragraph
+   -------------------------------------------------------------------------- */
+.about-hero-desc,
+.page-hero-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(15.5px, 1.25vw, 17.5px);
+  font-weight: 400;
+  line-height: 1.68;
+  color: #52525b;
+  max-width: 680px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Top-Right Dribbble Select Badge
+   -------------------------------------------------------------------------- */
+.about-hero-badge-wrap {
+  flex-shrink: 0;
+  margin-top: 6px;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-hero-badge-wrap:hover {
+  transform: translateY(-4px);
+}
+
+.about-hero-badge-img {
+  width: 114px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 24px rgba(15, 23, 42, 0.08));
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .trynix-about-hero-section,
+  .trynix-page-hero-section {
+    padding: 160px 0 65px;
+  }
+
+  .about-hero-layout,
+  .page-hero-layout {
+    flex-direction: column-reverse;
+    gap: 28px;
+  }
+
+  .about-hero-badge-wrap {
+    margin-top: 0;
+  }
+
+  .about-hero-badge-img {
+    width: 96px;
+  }
+
+  .about-hero-eyebrow,
+  .page-hero-eyebrow {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .about-hero-headline,
+  .page-hero-headline {
+    font-size: clamp(34px, 5.2vw, 48px);
+    margin-bottom: 16px;
+    line-height: 1.16;
+  }
+
+  .about-hero-subheadline,
+  .page-hero-subheadline {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .about-hero-desc,
+  .page-hero-desc {
+    font-size: 15.5px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .trynix-about-hero-section,
+  .trynix-page-hero-section {
+    padding: 135px 0 55px;
+  }
+
+  .about-hero-eyebrow,
+  .page-hero-eyebrow {
+    margin-bottom: 16px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .about-hero-headline,
+  .page-hero-headline {
+    font-size: 32px;
+    margin-bottom: 14px;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+  }
+
+  .about-hero-subheadline,
+  .page-hero-subheadline {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .about-hero-desc,
+  .page-hero-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-hero-badge-img {
+    width: 86px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Page Hero Transition Normalizations
+   -------------------------------------------------------------------------- */
+/* When hero section is present before wionabout-section1 (Services/Blogs), remove redundant 210px header clearance */
+.trynix-about-hero-section + .wionabout-section1,
+.trynix-page-hero-section + .wionabout-section1 {
+  padding-top: clamp(40px, 5vw, 75px) !important;
+}
+
+/* Career page: disable conflicting blob auras to maintain clean hero lighting */
+.career-body .career-page-wrapper::before,
+.career-body .career-page-wrapper::after {
+  display: none !important;
+}
+
+/* Career page: proper spacing for filters/jobs below hero */
+.trynix-about-hero-section + .career-jobs-section,
+.trynix-page-hero-section + .career-jobs-section {
+  padding-top: clamp(30px, 4vw, 55px) !important;
+}
+
+/* ==========================================================================
+   TrynixTech — "Capabilities" Section
+   Modern High-End 6-Card Studio Feature Matrix
+   ========================================================================== */
+
+.trynix-capabilities-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 40px 0 110px;
+  overflow: hidden;
+}
+
+.capabilities-header {
+  max-width: 960px;
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.capabilities-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.capabilities-title {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 16px 0;
+  max-width: 960px;
+}
+
+.capabilities-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18px);
+  font-weight: 400;
+  line-height: 1.66;
+  color: #64748b;
+  max-width: 820px;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* 3x2 Responsive Cards Grid */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.capability-card {
+  background-color: #f6f8fb;
+  border-radius: 18px;
+  padding: 36px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.035);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.capability-card:hover {
+  transform: translateY(-3px);
+  background-color: #f1f4f9;
+  border-color: rgba(59, 130, 246, 0.16);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+}
+
+.capability-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #0b1120;
+  margin-bottom: 24px;
+}
+
+.capability-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #0b1120;
+}
+
+.capability-name {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 19.5px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #080c1a;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+}
+
+.capability-detail {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.62;
+  color: #64748b;
+  margin: 0;
+  letter-spacing: -0.005em;
+}
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trynix-capabilities-section {
+    padding: 30px 0 75px;
+  }
+
+  .capabilities-header {
+    margin-bottom: 34px;
+  }
+
+  .capabilities-eyebrow {
+    margin-bottom: 14px;
+    font-size: 11.5px;
+  }
+
+  .capabilities-title {
+    font-size: 27px;
+    line-height: 1.22;
+  }
+
+  .capabilities-desc {
+    font-size: 14.5px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .capability-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+}
+
+/* ==========================================================================
+   TrynixTech — "About Mission & Metrics" Section (Reference Replica)
+   ========================================================================== */
+
+.trynix-about-statement-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(75px, 8vw, 120px) 0 clamp(80px, 9vw, 130px);
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.statement-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 60px);
+}
+
+.statement-content,
+.statement-layout,
+.statement-col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.statement-col-left {
+  display: none !important;
+}
+
+/* Display Headline */
+.statement-headline {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 34px 0;
+  max-width: 1060px;
+  text-align: left;
+}
+
+/* Inline Circular Sparkle Badge */
+.statement-spark-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(28px, 2.5vw, 36px);
+  height: clamp(28px, 2.5vw, 36px);
+  background-color: #0f172a;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 6px 0 4px;
+  position: relative;
+  top: -2px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.statement-headline:hover .statement-spark-badge {
+  transform: rotate(90deg) scale(1.08);
+}
+
+.statement-spark-badge svg {
+  display: block;
+}
+
+/* Action Button */
+.statement-action {
+  margin-bottom: clamp(50px, 5.8vw, 80px);
+}
+
+.statement-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f172a;
+  color: #ffffff !important;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 13px 30px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.statement-btn:hover {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+  color: #ffffff !important;
+}
+
+/* 4-Column Metrics Grid */
+.statement-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 3.6vw, 48px);
+  max-width: 1120px;
+  width: 100%;
+}
+
+.statement-metric-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Top Description */
+.metric-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0 0 16px 0;
+  min-height: 48px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+/* Bottom Metric Number */
+.metric-value {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .statement-headline {
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 26px;
+  }
+
+  .statement-action {
+    margin-bottom: 44px;
+  }
+
+  .statement-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+
+  .metric-desc {
+    min-height: auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 575px) {
+  .trynix-about-statement-section {
+    padding: 60px 0 70px;
+  }
+
+  .statement-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .statement-headline {
+    font-size: 24px;
+    line-height: 1.34;
+  }
+
+  .metric-value {
+    font-size: 32px;
+  }
+}
+
+/* ==========================================================================
+   TrynixTech — "Who We Are" Section
+   ========================================================================== */
+
+.trynix-who-we-are-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(75px, 8vw, 120px) 0 clamp(85px, 9vw, 130px);
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.who-we-are-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 60px);
+}
+
+/* 1. Eyebrow Tag (Clean Text, No Border Stroke, No Background) */
+.who-we-are-tag-wrap {
+  margin-bottom: 0;
+}
+
+.who-we-are-badge,
+.who-we-are-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 0 16px 0;
+  line-height: 1;
+}
+
+.who-we-are-divider {
+  display: none !important;
+}
+
+/* 2. Header: Stacked Headline & Subtitle (H1 / H2 Style Sequences) */
+.who-we-are-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 960px;
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.who-we-are-display-title,
+.who-we-are-title {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 16px 0;
+  max-width: 960px;
+}
+
+.who-we-are-subtitle,
+.who-we-are-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18px);
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: -0.01em;
+  color: #64748b;
+  margin: 0;
+  max-width: 820px;
+}
+
+/* Gallery Grid */
+.who-we-are-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3.5vw, 40px);
+}
+
+.who-gallery-item {
+  background: #f8fafc;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.who-gallery-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.07);
+}
+
+.gallery-img-wrapper {
+  height: clamp(300px, 34vw, 440px);
+  width: 100%;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.who-gallery-item:hover .gallery-img-wrapper img {
+  transform: scale(1.035);
+}
+
+.gallery-caption {
+  padding: 24px 28px 26px;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.caption-tag {
+  font-family: 'SatoshiBold', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #3b82f6;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+  line-height: 1;
+}
+
+.caption-text {
+  font-family: 'SatoshiRegular', sans-serif;
+  font-size: 14.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .who-we-are-header {
+    gap: 14px;
+    margin-bottom: 38px;
+  }
+
+  .who-we-are-display-title,
+  .who-we-are-title {
+    font-size: clamp(30px, 4.2vw, 42px);
+  }
+
+  .who-we-are-gallery {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .gallery-img-wrapper {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-are-header {
+    margin-bottom: 36px;
+  }
+
+  .who-we-are-display-title,
+  .who-we-are-title {
+    font-size: 32px;
+    line-height: 1.18;
+    margin-bottom: 14px;
+  }
+
+  .who-we-are-subtitle,
+  .who-we-are-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 575px) {
+  .trynix-who-we-are-section {
+    padding: 60px 0 70px;
+  }
+
+  .gallery-img-wrapper {
+    height: 250px;
+  }
+
+  .gallery-caption {
+    padding: 20px 22px;
+  }
+}
+
+/* ==========================================================================
+   TrynixTech — "Our Mission & Our Vision" Section
+   Modern 2-Column Alternating Editorial Story Blocks
+   ========================================================================== */
+
+.trynix-mission-vision-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(80px, 9vw, 130px) 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mission-vision-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 84px);
+}
+
+.mv-section-header {
+  max-width: 960px;
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.mv-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.mv-display-title {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 16px 0;
+  max-width: 960px;
+}
+
+.mv-display-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18px);
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: -0.01em;
+  color: #64748b;
+  margin: 0;
+  max-width: 820px;
+}
+
+/* Editorial Story Blocks (Alternating) */
+.mv-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(60px, 7vw, 100px);
+}
+
+.mv-story-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.mv-story-block.reversed {
+  direction: rtl;
+}
+
+.mv-story-block.reversed > * {
+  direction: ltr;
+}
+
+/* Story Content */
+.mv-story-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mv-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0c0c0e;
+  background: #f1f5f9;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  width: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+.mv-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4f46e5;
+}
+
+.mv-badge-dot.vision-dot {
+  background: #0284c7;
+}
+
+.mv-story-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: 800;
+  line-height: 1.24;
+  letter-spacing: -0.028em;
+  color: #0c0c0e;
+  margin: 0 0 18px 0;
+}
+
+.mv-story-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(15.5px, 1.2vw, 17px);
+  line-height: 1.72;
+  color: #475569;
+  margin: 0 0 28px 0;
+}
+
+/* Key Highlights in Story */
+.mv-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.mv-highlight-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: all 0.25s ease;
+}
+
+.mv-highlight-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.mv-highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.mv-highlight-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c0c0e;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.mv-highlight-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.mv-highlight-title {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c0c0e;
+  margin: 0;
+}
+
+.mv-highlight-text {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Media Frame */
+.mv-story-media {
+  position: relative;
+}
+
+.mv-media-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 24px 50px -15px rgba(15, 23, 42, 0.08);
+  height: clamp(340px, 36vw, 480px);
+}
+
+.mv-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mv-story-media:hover .mv-media-img {
+  transform: scale(1.035);
+}
+
+.mv-media-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(12, 12, 14, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 8px 18px;
+  color: #ffffff;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.mv-badge-spark {
+  color: #a855f7;
+}
+
+/* ==========================================================================
+   TrynixTech — "Core Values" Section
+   Pixel-Perfect Design System with 6 Premium Interactive Cards
+   ========================================================================== */
+
+.trynix-values-section {
+  position: relative;
+  background-color: #f8fafc;
+  padding: clamp(85px, 9vw, 130px) 0;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+}
+
+.values-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 84px);
+}
+
+.values-header {
+  max-width: 960px;
+  margin-bottom: clamp(48px, 6vw, 68px);
+}
+
+.values-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.values-display-title {
+  font-family: 'SatoshiBold', 'SatoshiBlack', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #0c0c0e;
+  margin: 0 0 16px 0;
+  max-width: 960px;
+}
+
+.values-display-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 18px);
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: -0.01em;
+  color: #64748b;
+  margin: 0;
+  max-width: 820px;
+}
+
+/* 6-Card Values Grid (3 Columns) */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.8vw, 32px);
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 36px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 18px 36px -10px rgba(15, 23, 42, 0.08);
+}
+
+.value-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.value-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c0c0e;
+  transition: all 0.25s ease;
+}
+
+.value-card:hover .value-icon-box {
+  background: #0c0c0e;
+  border-color: #0c0c0e;
+  color: #ffffff;
+}
+
+.value-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.value-number {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.value-card-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0c0c0e;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.value-card-desc {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsiveness for Mission, Vision & Values */
+@media (max-width: 991px) {
+  .mv-story-block {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .mv-story-block.reversed {
+    direction: ltr;
+  }
+  .mv-media-card {
+    height: 320px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mv-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+  .mv-media-card {
+    height: 260px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .value-card {
+    padding: 28px 24px;
+  }
+}
+
+
+
+
+
+

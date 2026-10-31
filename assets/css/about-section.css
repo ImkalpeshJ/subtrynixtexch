@@ -1,0 +1,252 @@
+/* ==========================================================================
+   TrynixTech — "About" Section (Below Hero)
+   Modern 2-Line Headline, Monochromatic Black & Grey Metric Cards
+   ========================================================================== */
+
+.trynix-about-manifest-section {
+  position: relative;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background: #ffffff !important;
+  padding: 105px 0 115px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+.about-manifest-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Display Headline
+   2-Line Bold Title with Brand Square Blue Dot
+   -------------------------------------------------------------------------- */
+.about-hero-title {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(38px, 4.6vw, 60px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  color: #0b0f19;
+  margin: 0 0 20px 0;
+  max-width: 1040px;
+}
+
+/* The signature blue/indigo square dot at the end of "imagination." */
+.about-title-dot {
+  display: inline-block;
+  width: clamp(10px, 1.1vw, 14px);
+  height: clamp(10px, 1.1vw, 14px);
+  background-color: #4f46e5;
+  border-radius: 2.5px;
+  margin-left: 6px;
+  vertical-align: baseline;
+  margin-bottom: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Subtitle Description (Directly spacing into 3 Cards without blue line)
+   -------------------------------------------------------------------------- */
+.about-hero-subtitle {
+  font-family: 'SatoshiMedium', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 450;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0 0 52px 0;
+  max-width: 720px;
+}
+
+/* --------------------------------------------------------------------------
+   Stats Grid (3 Metric Cards - Black & Grey Theme)
+   -------------------------------------------------------------------------- */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+/* Base Card: Monochromatic Black & Grey Styling */
+.about-stat-card {
+  position: relative;
+  border-radius: 22px;
+  padding: 38px 32px 38px 32px;
+  background: linear-gradient(165deg, #ffffff 65%, #f9fafb 100%);
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease;
+  cursor: default;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.08);
+  border-color: #090d1a;
+}
+
+/* --------------------------------------------------------------------------
+   Card Icon Badges (Refined Black & Grey Monochromatic)
+   -------------------------------------------------------------------------- */
+.stat-card-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 2;
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  color: #090d1a;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.about-stat-card:hover .stat-card-badge {
+  transform: scale(1.08);
+  background-color: #090d1a;
+  color: #ffffff;
+  border-color: #090d1a;
+}
+
+/* --------------------------------------------------------------------------
+   Card Content Typography
+   -------------------------------------------------------------------------- */
+.stat-card-label {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card-number {
+  font-family: 'SatoshiBold', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(44px, 3.8vw, 54px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #090d1a;
+  margin: 0 0 14px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card-desc {
+  font-family: 'SatoshiMedium', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #52525b;
+  margin: 0;
+  max-width: 270px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Corner Decorative Monochromatic Grey Shapes
+   -------------------------------------------------------------------------- */
+.stat-card-corner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 175px;
+  height: 175px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  border-bottom-right-radius: 22px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.stat-card-corner svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-stat-card:hover .stat-card-corner {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .about-stats-grid {
+    gap: 18px;
+  }
+
+  .about-stat-card {
+    padding: 32px 24px 34px;
+  }
+
+  .stat-card-number {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trynix-about-manifest-section {
+    padding: 75px 0 85px;
+  }
+
+  .about-hero-subtitle {
+    margin-bottom: 38px;
+  }
+
+  .stat-card-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-title {
+    font-size: 32px;
+    line-height: 1.18;
+  }
+
+  .about-hero-subtitle {
+    font-size: 15.5px;
+  }
+
+  .about-stat-card {
+    padding: 28px 22px 30px;
+  }
+
+  .stat-card-number {
+    font-size: 40px;
+  }
+
+  .stat-card-corner {
+    width: 140px;
+    height: 140px;
+  }
+}

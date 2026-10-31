@@ -1,0 +1,372 @@
+/* ==========================================================================
+   Linear-Inspired Client Showcase Section ('We work with Client')
+   ========================================================================== */
+
+.linear-clients-section {
+  position: relative;
+  background-color: #08090e;
+  background-image: 
+    radial-gradient(ellipse 70% 45% at 50% 60%, rgba(100, 80, 220, 0.16) 0%, rgba(65, 45, 170, 0.07) 50%, rgba(8, 9, 14, 0) 85%),
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.12) 0%, rgba(8, 9, 14, 0) 60%),
+    radial-gradient(1.5px 1.5px at 15% 25%, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
+    radial-gradient(1px 1px at 30% 65%, rgba(255, 255, 255, 0.35) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 75% 35%, rgba(255, 255, 255, 0.45) 50%, transparent 100%),
+    radial-gradient(1px 1px at 85% 75%, rgba(255, 255, 255, 0.35) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 85%, rgba(255, 255, 255, 0.4) 50%, transparent 100%),
+    radial-gradient(1px 1px at 45% 15%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  padding: 110px 0 130px 0;
+  overflow: hidden;
+  color: #ffffff;
+  isolation: isolate;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Linear Top-Left Icon Accent */
+.linear-brand-mark {
+  position: absolute;
+  top: 36px;
+  left: 42px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.linear-brand-mark:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Linear Left Vertical Decorative Text */
+.linear-vertical-label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* Linear Bottom-Left Section Index */
+.linear-section-num {
+  position: absolute;
+  bottom: 36px;
+  left: 42px;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Main Content Container */
+.linear-clients-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Label: 'We work with Client' */
+.linear-clients-eyebrow {
+  display: inline-block;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #8B5CF6;
+  margin-bottom: 22px;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Main Heading */
+.linear-clients-title {
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  max-width: 860px;
+  margin: 0 auto 18px auto;
+}
+
+/* Subtitle */
+.linear-clients-subtitle {
+  font-family: 'SatoshiRegular', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #94A3B8;
+  max-width: 680px;
+  margin: 0 auto 64px auto;
+}
+
+/* --------------------------------------------------------------------------
+   Logo Showcase Grid & Rows
+   -------------------------------------------------------------------------- */
+.linear-logos-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 68px auto;
+}
+
+.clients-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Individual Client Logo Item */
+.client-logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'SatoshiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.client-logo-item:hover {
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.45));
+}
+
+.client-logo-item svg {
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.28s ease;
+}
+
+.client-logo-item:hover svg {
+  transform: scale(1.05);
+}
+
+.client-brand-name {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Specific Logo Typography & Tweaks matching Linear customers reference */
+.ramp-brand {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.loom-brand {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.vercel-brand {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.descript-brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.cashapp-brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.raycast-brand {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.mercury-brand {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.retool-brand {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.alan-brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.arc-brand {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.opensea-brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* --------------------------------------------------------------------------
+   Curved Horizon Dome & CTA Button
+   -------------------------------------------------------------------------- */
+.linear-horizon-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Curved horizon curve layer */
+.linear-horizon-dome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 140%;
+  height: 180px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(139, 92, 246, 0.18) 0%, rgba(8, 9, 14, 0.95) 65%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -8px 40px -10px rgba(139, 92, 246, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Pill CTA Button: '-> Customer stories' */
+.linear-clients-cta {
+  position: relative;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  color: #f1f5f9;
+  font-family: 'SatoshiMedium', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.linear-clients-cta .cta-arrow {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.linear-clients-cta:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 24px rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+.linear-clients-cta:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .linear-vertical-label,
+  .linear-brand-mark,
+  .linear-section-num {
+    display: none;
+  }
+  .clients-logo-row {
+    gap: 36px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .linear-clients-section {
+    padding: 80px 0 100px 0;
+  }
+  .clients-logo-row {
+    gap: 28px 24px;
+  }
+  .client-logo-item {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+  .ramp-brand, .loom-brand, .vercel-brand, .retool-brand, .raycast-brand {
+    font-size: 18px;
+  }
+  .alan-brand {
+    font-size: 20px;
+  }
+  .mercury-brand {
+    font-size: 13px;
+  }
+  .linear-horizon-dome {
+    width: 170%;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .linear-clients-section {
+    padding: 60px 0 80px 0;
+  }
+  .clients-logo-row {
+    gap: 22px 18px;
+  }
+  .linear-clients-title {
+    font-size: 28px;
+  }
+  .linear-clients-subtitle {
+    margin-bottom: 42px;
+  }
+  .linear-logos-grid {
+    margin-bottom: 48px;
+  }
+}
