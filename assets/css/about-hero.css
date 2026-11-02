@@ -344,8 +344,10 @@ body:not(.home-page) .site-header:not(.sticky-menu) .wionmenu-toggle span::after
 
 /* Career page: proper spacing for filters/jobs below hero */
 .trynix-about-hero-section+.career-jobs-section,
-.trynix-page-hero-section+.career-jobs-section {
-  padding-top: clamp(30px, 4vw, 55px) !important;
+.trynix-page-hero-section+.career-jobs-section,
+.career-body .career-jobs-section,
+.career-page-wrapper .career-jobs-section {
+  padding-top: clamp(48px, 5.5vw, 76px) !important;
 }
 
 /* ==========================================================================

@@ -349,15 +349,20 @@
             <!-- Form -->
             <form class="contact-form" id="contactUsForm">
               
+              <!-- FormSubmit Free Tier Configurations -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Client Inquiry — TrynixTech Contact Form">
+              
               <!-- Row 1: First Name & Last Name -->
               <div class="form-row-2col">
                 <div class="form-field-group">
                   <label class="form-field-label" for="firstName">First name <span class="form-req-star">*</span></label>
-                  <input type="text" id="firstName" name="firstName" class="form-text-input" placeholder="First name" required>
+                  <input type="text" id="firstName" name="First Name" class="form-text-input" placeholder="First name" required>
                 </div>
                 <div class="form-field-group">
                   <label class="form-field-label" for="lastName">Last name <span class="form-req-star">*</span></label>
-                  <input type="text" id="lastName" name="lastName" class="form-text-input" placeholder="Last name" required>
+                  <input type="text" id="lastName" name="Last Name" class="form-text-input" placeholder="Last name" required>
                 </div>
               </div>
 
@@ -365,7 +370,7 @@
               <div class="form-row-2col">
                 <div class="form-field-group">
                   <label class="form-field-label" for="workEmail">Work email <span class="form-req-star">*</span></label>
-                  <input type="email" id="workEmail" name="workEmail" class="form-text-input" placeholder="you@company.com" required>
+                  <input type="email" id="workEmail" name="Work Email" class="form-text-input" placeholder="you@company.com" required>
                 </div>
                 <div class="form-field-group">
                   <label class="form-field-label" for="phoneNumber">Phone number</label>
@@ -382,7 +387,7 @@
                       <span>+91</span>
                       <span class="form-chevron" aria-hidden="true">&#9662;</span>
                     </div>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-text-input" placeholder="70388 39010">
+                    <input type="tel" id="phoneNumber" name="Phone Number" class="form-text-input" placeholder="70388 39010">
                   </div>
                 </div>
               </div>
@@ -391,7 +396,7 @@
               <div class="form-row-full">
                 <div class="form-field-group">
                   <label class="form-field-label" for="companyName">Company name</label>
-                  <input type="text" id="companyName" name="companyName" class="form-text-input" placeholder="Your company or brand">
+                  <input type="text" id="companyName" name="Company Name" class="form-text-input" placeholder="Your company or brand">
                 </div>
               </div>
 
@@ -402,7 +407,7 @@
                   
                   <!-- Chip 1: Website Development (Default Checked) -->
                   <label class="choice-chip is-selected" id="chip-web">
-                    <input type="checkbox" name="services" value="Website Development" checked>
+                    <input type="checkbox" name="Services Required" value="Website Development" checked>
                     <div class="choice-chip-inner">
                       <div class="choice-chip-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -417,7 +422,7 @@
 
                   <!-- Chip 2: UI/UX Design -->
                   <label class="choice-chip" id="chip-ui">
-                    <input type="checkbox" name="services" value="UI/UX Design">
+                    <input type="checkbox" name="Services Required" value="UI/UX Design">
                     <div class="choice-chip-inner">
                       <div class="choice-chip-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -433,7 +438,7 @@
 
                   <!-- Chip 3: AI Solutions -->
                   <label class="choice-chip" id="chip-ai">
-                    <input type="checkbox" name="services" value="AI Solutions">
+                    <input type="checkbox" name="Services Required" value="AI Solutions">
                     <div class="choice-chip-inner">
                       <div class="choice-chip-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -447,7 +452,7 @@
 
                   <!-- Chip 4: Other (Consultation) -->
                   <label class="choice-chip" id="chip-other">
-                    <input type="checkbox" name="services" value="Other (Consultation)">
+                    <input type="checkbox" name="Services Required" value="Other (Consultation)">
                     <div class="choice-chip-inner">
                       <div class="choice-chip-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -467,7 +472,7 @@
               <div class="form-row-full">
                 <div class="form-field-group">
                   <label class="form-field-label" for="projectDescription">Tell us more about your project <span class="form-req-star">*</span></label>
-                  <textarea id="projectDescription" name="projectDescription" class="form-textarea" placeholder="Give a brief summary of what you are looking to build or design..." required></textarea>
+                  <textarea id="projectDescription" name="Project Description" class="form-textarea" placeholder="Give a brief summary of what you are looking to build or design..." required></textarea>
                 </div>
               </div>
 
@@ -483,7 +488,7 @@
                   <span class="form-attach-sub">PDF, DOC, PPT or images up to 10MB</span>
                   <span class="form-file-selected-name" id="selectedFileName"></span>
                 </div>
-                <input type="file" id="contactFileUpload" class="form-file-hidden" accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg">
+                <input type="file" id="contactFileUpload" name="Attached File" class="form-file-hidden" accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg">
               </div>
 
               <!-- Row 7: Submit CTA -->
@@ -703,29 +708,38 @@
         });
       }
 
-      // 3. Form Submission Handling
+      // 3. Form Submission Handling (FormSubmit AJAX - Free Tier)
       const contactForm = document.getElementById('contactUsForm');
       const successBanner = document.getElementById('contactSuccessMsg');
       const submitBtn = document.getElementById('contactSubmitBtn');
-      if (contactForm && successBanner) {
+
+      if (contactForm && successBanner && submitBtn) {
         contactForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = '0.7';
-            submitBtn.innerHTML = '<span>Sending...</span>';
-          }
 
-          // Simulate fast response
-          setTimeout(function () {
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+          submitBtn.innerHTML = '<span>Sending message...</span>';
+
+          const formData = new FormData(contactForm);
+
+          fetch('https://formsubmit.co/ajax/contact@trynixtech.in', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: formData
+          })
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (data) {
             successBanner.style.display = 'block';
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.style.opacity = '1';
-              submitBtn.innerHTML = '<span>Message Sent!</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-            }
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            submitBtn.innerHTML = '<span>Message Sent!</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
             contactForm.reset();
-            // Reset chip active state to default
+            const chips = document.querySelectorAll('.choice-chip');
             chips.forEach(function (c) {
               const inp = c.querySelector('input');
               if (inp && inp.defaultChecked) {
@@ -735,10 +749,18 @@
                 c.classList.remove('is-selected');
               }
             });
+            const fileNameDisplay = document.getElementById('selectedFileName');
             if (fileNameDisplay) {
               fileNameDisplay.style.display = 'none';
             }
-          }, 600);
+          })
+          .catch(function (err) {
+            alert('Submission failed. Please check your internet connection or email us directly at contact@trynixtech.in');
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+          });
         });
       }
     });

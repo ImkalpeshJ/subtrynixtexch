@@ -556,38 +556,41 @@
 
       <!-- Application Form -->
       <form id="careerApplicationForm">
-        <input type="hidden" id="formRoleInput" name="role" value="">
-        <input type="hidden" id="formDeptInput" name="department" value="">
+        <!-- FormSubmit Free Tier Configurations -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" id="formRoleInput" name="Applied Role" value="">
+        <input type="hidden" id="formDeptInput" name="Department" value="">
 
         <div class="career-form-group">
           <label class="career-form-label" for="applicantName">Full Name *</label>
-          <input type="text" id="applicantName" name="fullName" class="career-form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+          <input type="text" id="applicantName" name="Full Name" class="career-form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
         </div>
 
         <div class="row">
           <div class="col-md-6">
             <div class="career-form-group">
               <label class="career-form-label" for="applicantEmail">Email Address *</label>
-              <input type="email" id="applicantEmail" name="email" class="career-form-input" placeholder="alex@example.com" required autocomplete="email">
+              <input type="email" id="applicantEmail" name="Email Address" class="career-form-input" placeholder="alex@example.com" required autocomplete="email">
             </div>
           </div>
           <div class="col-md-6">
             <div class="career-form-group">
               <label class="career-form-label" for="applicantPhone">Phone Number</label>
-              <input type="tel" id="applicantPhone" name="phone" class="career-form-input" placeholder="+1 (555) 000-0000" autocomplete="tel">
+              <input type="tel" id="applicantPhone" name="Phone Number" class="career-form-input" placeholder="+1 (555) 000-0000" autocomplete="tel">
             </div>
           </div>
         </div>
 
         <div class="career-form-group">
           <label class="career-form-label" for="applicantPortfolio">Portfolio or LinkedIn URL *</label>
-          <input type="url" id="applicantPortfolio" name="portfolioUrl" class="career-form-input" placeholder="https://linkedin.com/in/username" required>
+          <input type="url" id="applicantPortfolio" name="Portfolio / LinkedIn" class="career-form-input" placeholder="https://linkedin.com/in/username" required>
         </div>
 
         <div class="career-form-group">
           <label class="career-form-label">Resume / CV (PDF, DOCX max 5MB)</label>
           <label class="career-file-dropzone" for="applicantResume">
-            <input type="file" id="applicantResume" name="resume" accept=".pdf,.doc,.docx" style="display: none;">
+            <input type="file" id="applicantResume" name="Resume / CV" accept=".pdf,.doc,.docx" style="display: none;">
             <div class="career-dropzone-text" id="dropzoneText">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 6px;">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -601,7 +604,7 @@
 
         <div class="career-form-group">
           <label class="career-form-label" for="applicantNote">Why are you interested in this role?</label>
-          <textarea id="applicantNote" name="note" class="career-form-textarea" rows="3" placeholder="Tell us a bit about yourself and why you'd be a great fit..."></textarea>
+          <textarea id="applicantNote" name="Candidate Note" class="career-form-textarea" rows="3" placeholder="Tell us a bit about yourself and why you'd be a great fit..."></textarea>
         </div>
 
         <button type="submit" class="career-submit-btn" id="submitAppBtn">
@@ -757,7 +760,7 @@
         });
       }
 
-      // Handle Application Form Submit
+      // Handle Application Form Submit (FormSubmit AJAX - Free Tier)
       if (form) {
         form.addEventListener('submit', function (e) {
           e.preventDefault();
@@ -765,15 +768,34 @@
           submitBtn.disabled = true;
           submitBtn.innerHTML = '<span>Submitting application...</span>';
 
-          // Simulate brief submission delay
-          setTimeout(function () {
+          const formData = new FormData(form);
+          const role = formRoleInput ? formRoleInput.value : 'Open Position';
+          const dept = formDeptInput ? formDeptInput.value : 'General';
+          formData.append('_subject', 'New Job Application: ' + role + ' (' + dept + ')');
+
+          fetch('https://formsubmit.co/ajax/contact@trynixtech.in', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: formData
+          })
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (data) {
             form.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<span>Submit Application</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
             form.style.display = 'none';
             successBlock.classList.add('visible');
             dropzoneText.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg><div><strong>Click to upload</strong> or drag and drop your resume</div>';
-          }, 600);
+          })
+          .catch(function (err) {
+            alert('Could not submit application. Please check your connection or email contact@trynixtech.in');
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Submit Application</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+          });
         });
       }
     });

@@ -232,6 +232,7 @@ body.career-body {
 .career-jobs-section {
   position: relative;
   z-index: 1;
+  padding-top: clamp(48px, 5.5vw, 76px);
   padding-bottom: 90px;
 }
 
