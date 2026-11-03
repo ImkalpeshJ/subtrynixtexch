@@ -186,8 +186,28 @@
               </button>
             </li>
             <li>
+              <button type="button" class="career-filter-btn" data-category="sales" role="tab" aria-selected="false">
+                Sales
+              </button>
+            </li>
+            <li>
+              <button type="button" class="career-filter-btn" data-category="marketing" role="tab" aria-selected="false">
+                Marketing
+              </button>
+            </li>
+            <li>
               <button type="button" class="career-filter-btn" data-category="design" role="tab" aria-selected="false">
                 Design
+              </button>
+            </li>
+            <li>
+              <button type="button" class="career-filter-btn" data-category="technology" role="tab" aria-selected="false">
+                Technology
+              </button>
+            </li>
+            <li>
+              <button type="button" class="career-filter-btn" data-category="data-ai" role="tab" aria-selected="false">
+                Data/AI
               </button>
             </li>
             <li>
@@ -195,27 +215,71 @@
                 Engineering
               </button>
             </li>
-            <li>
-              <button type="button" class="career-filter-btn" data-category="product" role="tab" aria-selected="false">
-                Product
-              </button>
-            </li>
-            <li>
-              <button type="button" class="career-filter-btn" data-category="data" role="tab" aria-selected="false">
-                Data &amp; AI
-              </button>
-            </li>
           </ul>
         </div>
         
-        <!-- Job Cards List (Matching Reference Design) -->
+        <!-- Job Cards List (Total 6 Positions) -->
         <div class="career-jobs-cards-wrap" id="job-listings">
 
-          <!-- 1. Product Designer -->
-          <article class="career-job-card" data-categories="design" data-aos="fade-up" data-aos-delay="100">
+          <!-- 1. Business Development Intern (Sales) -->
+          <article class="career-job-card" data-categories="sales" data-aos="fade-up" data-aos-delay="100">
             <div class="career-job-info">
-              <h3 class="career-job-role-title">Product Designer</h3>
-              <p class="career-job-meta-row">Full-time • Remote / US</p>
+              <h3 class="career-job-role-title">Business Development Intern</h3>
+              <p class="career-job-meta-row">Internship • Remote</p>
+              <p class="career-job-exp-row">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Internship</span>
+              </p>
+            </div>
+            <button type="button" class="career-apply-btn js-open-modal" data-job="Business Development Intern" data-dept="Sales" aria-label="Apply for Business Development Intern position">
+              Apply Now
+            </button>
+          </article>
+
+          <!-- 2. Social Media Marketing Intern (Marketing) -->
+          <article class="career-job-card" data-categories="marketing" data-aos="fade-up" data-aos-delay="150">
+            <div class="career-job-info">
+              <h3 class="career-job-role-title">Social Media Marketing Intern</h3>
+              <p class="career-job-meta-row">Internship • Remote</p>
+              <p class="career-job-exp-row">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Internship</span>
+              </p>
+            </div>
+            <button type="button" class="career-apply-btn js-open-modal" data-job="Social Media Marketing Intern" data-dept="Marketing" aria-label="Apply for Social Media Marketing Intern position">
+              Apply Now
+            </button>
+          </article>
+
+          <!-- 3. UI/UX Design Intern (Design) -->
+          <article class="career-job-card" data-categories="design" data-aos="fade-up" data-aos-delay="200">
+            <div class="career-job-info">
+              <h3 class="career-job-role-title">UI/UX Design Intern</h3>
+              <p class="career-job-meta-row">Internship • Remote</p>
+              <p class="career-job-exp-row">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Internship</span>
+              </p>
+            </div>
+            <button type="button" class="career-apply-btn js-open-modal" data-job="UI/UX Design Intern" data-dept="Design" aria-label="Apply for UI/UX Design Intern position">
+              Apply Now
+            </button>
+          </article>
+
+          <!-- 4. Full-Stack Developer (Technology) -->
+          <article class="career-job-card" data-categories="technology" data-aos="fade-up" data-aos-delay="250">
+            <div class="career-job-info">
+              <h3 class="career-job-role-title">Full-Stack Developer</h3>
+              <p class="career-job-meta-row">Full-time • Remote</p>
               <p class="career-job-exp-row">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -224,34 +288,16 @@
                 <span>3+ years</span>
               </p>
             </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="Product Designer" data-dept="Design" aria-label="Apply for Product Designer position">
+            <button type="button" class="career-apply-btn js-open-modal" data-job="Full-Stack Developer" data-dept="Technology" aria-label="Apply for Full-Stack Developer position">
               Apply Now
             </button>
           </article>
 
-          <!-- 2. Frontend Engineer -->
-          <article class="career-job-card" data-categories="engineering" data-aos="fade-up" data-aos-delay="150">
+          <!-- 5. AI Solutions Architect (Data/AI) -->
+          <article class="career-job-card" data-categories="data-ai" data-aos="fade-up" data-aos-delay="300">
             <div class="career-job-info">
-              <h3 class="career-job-role-title">Frontend Engineer</h3>
-              <p class="career-job-meta-row">Part-time • Remote / US</p>
-              <p class="career-job-exp-row">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-                <span>3+ years</span>
-              </p>
-            </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="Frontend Engineer" data-dept="Engineering" aria-label="Apply for Frontend Engineer position">
-              Apply Now
-            </button>
-          </article>
-
-          <!-- 3. Product Manager -->
-          <article class="career-job-card" data-categories="product" data-aos="fade-up" data-aos-delay="200">
-            <div class="career-job-info">
-              <h3 class="career-job-role-title">Product Manager</h3>
-              <p class="career-job-meta-row">Contract • Remote / US</p>
+              <h3 class="career-job-role-title">AI Solutions Architect</h3>
+              <p class="career-job-meta-row">Full-time • Remote</p>
               <p class="career-job-exp-row">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -260,16 +306,16 @@
                 <span>4+ years</span>
               </p>
             </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="Product Manager" data-dept="Product" aria-label="Apply for Product Manager position">
+            <button type="button" class="career-apply-btn js-open-modal" data-job="AI Solutions Architect" data-dept="Data/AI" aria-label="Apply for AI Solutions Architect position">
               Apply Now
             </button>
           </article>
 
-          <!-- 4. Data Engineer -->
-          <article class="career-job-card" data-categories="data engineering" data-aos="fade-up" data-aos-delay="250">
+          <!-- 6. Frontend Engineer (Engineering) -->
+          <article class="career-job-card" data-categories="engineering" data-aos="fade-up" data-aos-delay="350">
             <div class="career-job-info">
-              <h3 class="career-job-role-title">Data Engineer</h3>
-              <p class="career-job-meta-row">Full-time • Remote / US</p>
+              <h3 class="career-job-role-title">Frontend Engineer</h3>
+              <p class="career-job-meta-row">Full-time • Remote</p>
               <p class="career-job-exp-row">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -278,43 +324,7 @@
                 <span>2+ years</span>
               </p>
             </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="Data Engineer" data-dept="Data &amp; AI" aria-label="Apply for Data Engineer position">
-              Apply Now
-            </button>
-          </article>
-
-          <!-- 5. Senior Full-Stack Engineer -->
-          <article class="career-job-card" data-categories="engineering" data-aos="fade-up" data-aos-delay="300">
-            <div class="career-job-info">
-              <h3 class="career-job-role-title">Senior Full-Stack Engineer</h3>
-              <p class="career-job-meta-row">Full-time • Remote / US</p>
-              <p class="career-job-exp-row">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-                <span>5+ years</span>
-              </p>
-            </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="Senior Full-Stack Engineer" data-dept="Engineering" aria-label="Apply for Senior Full-Stack Engineer position">
-              Apply Now
-            </button>
-          </article>
-
-          <!-- 6. AI Solutions Architect -->
-          <article class="career-job-card" data-categories="data engineering" data-aos="fade-up" data-aos-delay="350">
-            <div class="career-job-info">
-              <h3 class="career-job-role-title">AI Solutions Architect</h3>
-              <p class="career-job-meta-row">Full-time • Remote / US</p>
-              <p class="career-job-exp-row">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-                <span>4+ years</span>
-              </p>
-            </div>
-            <button type="button" class="career-apply-btn js-open-modal" data-job="AI Solutions Architect" data-dept="Data &amp; AI" aria-label="Apply for AI Solutions Architect position">
+            <button type="button" class="career-apply-btn js-open-modal" data-job="Frontend Engineer" data-dept="Engineering" aria-label="Apply for Frontend Engineer position">
               Apply Now
             </button>
           </article>
@@ -577,7 +587,7 @@
           <div class="col-md-6">
             <div class="career-form-group">
               <label class="career-form-label" for="applicantPhone">Phone Number</label>
-              <input type="tel" id="applicantPhone" name="Phone Number" class="career-form-input" placeholder="+1 (555) 000-0000" autocomplete="tel">
+              <input type="tel" id="applicantPhone" name="Phone Number" class="career-form-input" placeholder="+91 98765 43210" autocomplete="tel">
             </div>
           </div>
         </div>

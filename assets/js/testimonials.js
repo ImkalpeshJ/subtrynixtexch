@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Client stories dataset using actual TrynixTech clients and quotes
   const storiesData = [
     {
-      company: 'LUXURY PRESENCE',
-      quote: "I've worked with the TrynixTech team on several projects and they're one of the best UI/UX designers and front-end developers I know. They are meticulous in attention to detail and have a true passion for creating beautiful user interfaces.",
+      company: 'IndiBlue',
+      quote: "Working with Trynixtech was a really good experience. The team understood what we needed and created a website that represents our business well. They were creative, supportive, and easy to work with throughout the project.",
       name: 'Malte Kramer',
-      role: 'Founder & CEO · USA',
+      role: 'Founder & CEO · IndiBlue',
       avatar: 'assets/images/team/team3.png'
     },
     {
@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
       avatar: 'assets/images/team/team1.png'
     },
     {
-      company: 'ZENVUE',
-      quote: "Working with TrynixTech was a dream. They transformed our vision into a calm, elegant brand that speaks directly to our audience. The branding and UI design elevated the whole product with countless compliments since launch.",
-      name: 'Sarah Lin',
-      role: 'Founder · Zenvue',
-      avatar: 'assets/images/team/team2.png'
+      company: 'SMEonCloudERP',
+      quote: "Trynixtech delivered an excellent website that showcases SMEonCloudERP’s powerful capabilities. The modern design clearly highlights our inventory, production, e-invoicing, and business management solutions. Their team understood our vision and transformed it into a professional digital experience.",
+      name: 'P. Shinde',
+      role: 'Founder · SMEonCloudERP',
+      avatar: 'assets/images/testimonial/p-shinde.jpg'
     }
   ];
 
